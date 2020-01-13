@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tame Formación</title>
+    <style>
+      table {
+        border: 1px solid blue;
+        border-collapse: collapse;
+        color: blue;
+        font-family: courier;
+        font-size: 25px;
+        width: 50%;
+      }
+
+/* Interesting: This makes possible to highlight between odd and even table rows */
+
+      table tr:nth-child(even) {
+        background-color: #eee;
+      }
+
+      table tr:nth-child(odd) {
+        background-color: #fff;
+      }
+
+      th {
+        background-color: gray;
+        color: white;
+        padding: 10px;
+          }
+      td {
+        padding: 25px;
+        font-family: monospace;
+        text-align: center;
+      }
+      td:hover {
+        background-color: red;
+        color: black;
+      }
+      </style>
+  </head>
+  <body>
+
+<!-- Primer ejercicio con tablas -->
+
+    <table border="1">
+      <caption>Primer ejercicio</caption>
+      <tr>
+        <td>fila1, columna1</td>
+        <td>fila1, columna2</td>
+      </tr>
+      <tr>
+        <td>fila2, columna1</td>
+        <td>fila2, columna2</td>
+      </tr>
+    </table border="1">
+    <br><br>
+
+<!-- Fin primer ejercicio con tablas -->
+
+<!-- Segundo ejercicio con tablas -->
+
+    <p>Segundo Ejercicio</p>
+    <table>
+      <caption>Uno</caption>
+      <tr>
+        <td>100</td>
+      </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1">
+      <caption>Dos</caption>
+      <tr>
+        <th>Encabezado 1</th>
+        <th>Encabezado 2</th>
+        <th>Encabezado 3</th>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+      </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1">
+      <caption>Tres</caption>
+      <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+      </tr>
+    </table>
+
+<!-- Fin segundo ejercicio con tablas -->
+
+<!--
+El tercer ejercicio fue colocar cabeceras a las tablas
+utilicé la segunda tabla del segundo ejercicio para incluir
+las cabeceras del tercer ejercicio
+-->
+
+<!-- Cuarto ejercicio encabezado en filas
+With cell that spans two rows-->
+
+    <br><br>
+    <table border="1">
+      <caption>Vertical Headers</caption>
+      <tr>
+        <th>Fist Name:</th>
+        <td>Bill Gates</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Telephone:</th>
+        <td>555 77 854</td>
+      </tr>
+      <tr>
+        <td>555 77 855</td>
+      </tr>
+    </table>
+
+    <!-- Quinto ejercicio encabezado en filas
+    With cell that spans two columns-->
+
+    <br><br>
+    <table border="1">
+      <caption>Cell that spans two columns</caption>
+      <tr>
+        <th>Name</th>
+        <th colspan="2">Telephone</th>
+      </tr>
+      <tr>
+        <td>Bill Gates</td>
+        <td>555 77 854</td>
+        <td>555 77 855</td>
+      </tr>
+
+    </table>
+  </body>
+</html>

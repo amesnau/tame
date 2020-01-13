@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tame Formación</title>
+  </head>
+  <body>
+    <form>
+      <input type="radio" name="tamanyo" value="small" id="sizeSmall" checked>
+      <label for="sizeSmall">peque&ntilde;o</label><br>
+      <input type="radio" name="tamanyo" id="sizeMed" value="medium">
+      <label for="sizeMed">mediano</label><br>
+      <input type="radio" name="tamanyo" value="large" id="sizeLarge">
+      <label for="sizeLarge">grande</label><br>
+    </form>
+    <form action="html_form_action.asp" method="get">
+      <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+      <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
+      <input type="text" name="nombre" placeholder="Introduce tu nombre"/><br/>
+      <select name="cars">
+        <option value="" disabled selected hidden>Selecciona una opción</option>
+         <option value="volvo">Volvo</option>
+         <option value="saab">Saab</option>
+         <option value="opel" disabled>Opel</option>
+         <option value="audi">Audi</option><br>
+         <input type="submit" name="vehicle" value="presentar">
+         <br><input type="reset" name="vehicle" value="Reset">
+      </select>
+    </form>
+    <textarea rows="10" cols="30" autofocus maxlength="100" style="resize:none;">
+      At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+    </textarea>
+    <form>
+  <input type="button" value="Pincha aquí" onclick="msg()">
+</form>
+<h2>The Button Element</h2>
+<button type="button" onclick="msg()">
+  <p>
+    <strong>El contenido HTML</strong>
+    está permitido en este botón</p>
+    <p>Recuerda estudiar también el elemneto HTML input <a href="http://www.htmlquick.com/reference/tags/input.html">Enlace</a>
+  </p>
+</button>
+<form action="">
+ <fieldset>
+   <legend>Personal Information:</legend>
+   Name: <input type="text" size="30"><br>
+   Email: <input type="text" size="30"><br>
+   Date of birth: <input type="text" size="10">
+ </fieldset>
+</form>
+<script>
+function msg() {
+  alert("Ey! Ya presionaste el botón!!!");
+}
+</script>
+
+  </body>
+</html>
