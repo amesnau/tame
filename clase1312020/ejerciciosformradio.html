@@ -71,6 +71,23 @@ hora: <input type="time" name="hora" value="18:12:00">
 <input type="submit">
 </form>
 
+<form action="/action_page.php">
+
+ Enter a date before 1980-01-01:
+ <input type="date" name="bday" max="1979-12-31">
+
+ Enter a date after 2000-01-01:
+ <input type="date" name="bday" min="2000-01-02">
+
+ Quantity (between 1 and 5):
+ <input type="number" name="quantity" min="1" max="5" step="0.2">
+
+ <input type="submit">
+
+<input type="range" name="val" min="1" max="10">
+<input type="color" name="get_color">
+</form>
+
 <script>
 function msg() {
   alert("Ey! Ya presionaste el botón!!!");
