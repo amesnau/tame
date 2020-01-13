@@ -49,6 +49,26 @@
    Date of birth: <input type="text" size="10">
  </fieldset>
 </form>
+
+<form action="demo_form.asp" method="get">
+
+<input list="browsers" name="browsers">
+
+<datalist id="browsers">
+ <option value="Internet Explorer">
+ <option value="Firefox">
+ <option value="Chrome">
+ <option value="Opera">
+ <option value="Safari">
+</datalist>
+<input type="submit">
+</form>
+
+<form action="/action_page.php">
+Password: <input type="password" name="pw" pattern=".{7,12}" title="Six or more characters">
+<input type="submit">
+</form>
+
 <script>
 function msg() {
   alert("Ey! Ya presionaste el botón!!!");
