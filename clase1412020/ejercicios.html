@@ -4,12 +4,32 @@
     <meta charset="utf-8">
     <title>Tame Formación</title>
   </head>
-  <body>
-    <<script type="text/javascript">
+  <body onpageshow="welcome()">
+    <!-- primer ejercicio
+    <script type="text/javascript">
       document.write("<h1>Hello World</h1>");
     </script>
     <noscript>
       Tu navegador no soporta javascript;
-    </noscript>
+    </noscript-->
+    <p id="demo" onwheel="expand()" oncopy="welcome">
+      javascript puede reaccionar a eventos, como puede ser el click de un botón.
+    </p>
+    <button type="button" onclick="myFunction()">Pincha!</button>
+    <script type="text/javascript">
+    function myFunction() {
+      x.style.fontSize = "18px";
+      x.style.color = "black";
+      x.innerHTML="Hola javascript!!!"
+    }
+    function welcome() {
+      alert("benvingut a esta pàgina web");
+      x=document.getElementById("demo");
+    }
+    function expand() {
+      x.style.fontSize = "35px";
+      x.style.color = "blue";
+    }
+    </script>
   </body>
 </html>
