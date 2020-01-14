@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tame </title>
+    <style>
+      .imagen_form {
+        border-style: solid;
+        padding: 50px;
+        width: 304px;
+        height: 228px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+      La roca del púlpito es un enorme acantilado de 604 metros (1982 pies)
+      por encima de Lysefjorden, frente a la meseta de Kjerag, en Forsand, Tyfylke,
+      Noruega. La parte superior del acantilado es de aproximadamente 25 por 25
+      metros (82 por 82 pies) cuadrados y casi plana, y es una famosa atracción
+      turística en Noruega.</pre>
+
+<figure class="imagen_form">
+  <img src="https://www.w3schools.com/tags/img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+  <figcaption>Fig. 1 - La roca del púlpito, Noruega</figcaption>
+</figure>
+
+<canvas id="myCanvas" style="border: 1px solid #000000"></canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0, 0, 300, 300);
+ctx.moveTo(0, 0);
+ctx.lineTo(600, 300);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(200, 70, 40, 0, 2 * Math.PI);
+ctx.stroke();
+</script>
+  </body>
+</html>
