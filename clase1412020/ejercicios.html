@@ -12,7 +12,7 @@
     <noscript>
       Tu navegador no soporta javascript;
     </noscript-->
-    <p id="demo" onwheel="expand()" oncopy="welcome">
+    <p id="demo" onwheel="expand()">
       javascript puede reaccionar a eventos, como puede ser el click de un botón.
     </p>
     <button type="button" onclick="myFunction()">Pincha!</button>
@@ -27,8 +27,16 @@
       x=document.getElementById("demo");
     }
     function expand() {
-      x.style.fontSize = "35px";
-      x.style.color = "blue";
+      if (x.style.fontSize == "35px") {
+        x.style.fontSize = "18px";
+      } else {
+        x.style.fontSize = "35px";
+      }
+      if (x.style.color == "blue") {
+        x.style.color = "black";
+      } else {
+        x.style.color = "blue";
+      }
     }
     </script>
   </body>

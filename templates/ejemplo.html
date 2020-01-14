@@ -31,7 +31,7 @@
             <div id="hmenu">
               <ul>
                 <li>
-                  <a href="#">Inicio</a>
+                  <a href="#" onclick="myFunction()">Inicio</a>
                 </li>
                 <li>
                   <a href="#" onclick="myFunction1()">Portfolio</a>
@@ -143,6 +143,9 @@
       </div>
     </div>
     <script>
+    function myFunction() {
+        document.getElementById('textoCambiar').innerHTML = '';;
+    }
     function myFunction1() {
         document.getElementById('textoCambiar').innerHTML = 'Estás en Portfolio';;
     }
