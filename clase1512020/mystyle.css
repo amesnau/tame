@@ -1,0 +1,20 @@
+body {
+  background-color: yellow;
+}
+h1 {
+  font-size: 36pt;
+}
+h2 {
+  color: blue;
+}
+p {
+  color: red;
+  margin-left: 1.5em;
+}
+#para1 {
+  text-align: center;
+  color: red;
+}
+p.center {
+  text-align: center;
+}
