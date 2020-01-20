@@ -21,7 +21,7 @@
 	<script type="text/javascript" language="javascript" src="js/custom.js"></script>
     <!-- Add your custom script here -->
   </head>
-  <body>
+  <body onload="cargaInicial">
     <div id="wrapper">
       <div class="bg"></div>
       <div class="row">
@@ -54,20 +54,20 @@
             <div id="tagline">
               <h1>Hola esta la página web de Francisco</h1>
               <h2 id="textoCambiar"></h2>
-              <input type="button" class="cta pie" value="Learn more..." />
+              <input type="button" id="botonInfo"class="cta pie" onclick="botonAprendemas()"value="Mas info" />
             </div>
           </div>
           <div id="page" class="home">
             <div id="main">
               <section class="home">
                 <header class="headline">
-                  <h2>We help you to meet your objectives</h2>
+                  <h2 id="textoCambiarOtro">Ayudamos a que alcances tus objetivos</h2>
                 </header>
                 <div class="group wrapper">
                   <div class="col span_1_of_3">
                     <img src="images/panoramic-108.jpg" class="pano" />
                     <header>
-                      <h3>What We Do</h3>
+                      <h3>Desarrolladores</h3>
                     </header>
                     <a href="https://ruslankomarytskiy.neocities.org/">Ruslan</a><br>
                     <a href="https://vicenteroigtame.neocities.org/">Vicente</a><br>
@@ -77,7 +77,7 @@
                   <div class="col span_1_of_3">
                     <img src="images/panoramic-115.jpg" class="pano" />
                     <header>
-                      <h3>Our Process</h3>
+                      <h3>Desarrolladores</h3>
                     </header>
                     <a href="https://enmibiblioteca.neocities.org/">Ángel</a><br>
                     <a href="https://webdepruebalily.neocities.org/">Lily</a><br>
@@ -87,7 +87,7 @@
                   <div class="col span_1_of_3">
                     <img src="images/panoramic-109.jpg" class="pano" />
                     <header>
-                      <h3>Our Clients</h3>
+                      <h3>Desarrolladores</h3>
                     </header>
                     <a href="https://andreavb.neocities.org/">Andrea</a><br>
                     <a href="https://webclasetame.neocities.org/">Salva</a><br>
@@ -142,20 +142,5 @@
         <div id="container-bottom"></div>
       </div>
     </div>
-    <script>
-    function myFunction() {
-        document.getElementById('textoCambiar').innerHTML = '';;
-    }
-    function myFunction1() {
-        document.getElementById('textoCambiar').innerHTML = 'Estás en Portfolio';;
-    }
-    function myFunction2() {
-        document.getElementById('textoCambiar').innerHTML = 'Estás en nosotros';;
-    }
-    function myFunction3() {
-        document.getElementById('textoCambiar').innerHTML = 'Estás en contactos';;
-    }
-
-    </script>
   </body>
 </html>
