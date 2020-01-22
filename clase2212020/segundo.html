@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tame Formación</title>
+    <style>
+    :root {
+      font-family: courier;
+      font-size: 1.2em;
+    }
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        color: black;
+        font-family: courier;
+        font-size: 25px;
+        width: 50%;
+      }
+
+/* Interesting: This makes possible to highlight between odd and even table rows */
+
+      table tr:nth-child(even) {
+        background-color: #eee;
+      }
+
+      table tr:nth-child(odd) {
+        background-color: #fff;
+      }
+
+      th {
+        border: 1px solid black;
+        padding: 10px;
+          }
+      td {
+        padding: 10px;
+        font-family: monospace;
+        text-align: left;
+        height: 50px;
+        vertical-align: bottom;
+      }
+      td:hover {
+        background-color: red;
+        color: black;
+      }
+      td.der {
+        text-align: right;
+      }
+      </style>
+  </head>
+  <body>
+
+<!-- Primer ejercicio con tablas -->
+
+    <table border="1">
+      <caption>Segundo ejercicio</caption>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Ahorros</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td class="der">$100</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td class="der">$150</td>
+      </tr>
+      <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td class="der">$300</td>
+      </tr>
+      <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td class="der">$250</td>
+      </tr>
+    </table border="1">
+    <br><br>
+
+<p><strong>Note: </strong>If a !DOCTYPE is not especified, the border-collapse property can produce unexpected results in IE8 and earlier versions</p>
+
+
+<!--
+    <br><br>
+
+    <table border="1">
+      <caption>Segundo Ejercicio</caption>
+      <tr>
+        <th>2016</th>
+        <th>Chrome</th>
+      </tr>
+      <tr>
+        <td>December</td>
+        <td>73.7 %</td>
+      </tr>
+      <tr>
+        <td>November</td>
+        <td>73.8 %</td>
+      </tr>
+      <tr>
+        <td>October</td>
+        <td>73.0 %</td>
+      </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1">
+      <caption>Tres</caption>
+      <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+      </tr>
+    </table>
+-->
+
+<!--
+El tercer ejercicio fue colocar cabeceras a las tablas
+utilicé la segunda tabla del segundo ejercicio para incluir
+las cabeceras del tercer ejercicio
+-->
+
+<!-- Cuarto ejercicio encabezado en filas
+With cell that spans two rows-->
+
+    <!--
+    <br><br>
+    <table border="1">
+      <caption>Vertical Headers</caption>
+      <tr>
+        <th>Fist Name:</th>
+        <td>Bill Gates</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Telephone:</th>
+        <td>555 77 854</td>
+      </tr>
+      <tr>
+        <td>555 77 855</td>
+      </tr>
+    </table>
+
+    <!-- Quinto ejercicio encabezado en filas
+    With cell that spans two columns-->
+<!--
+    <br><br>
+    <table border="1">
+      <caption>Cell that spans two columns</caption>
+      <tr>
+        <th>Name</th>
+        <th colspan="2">Telephone</th>
+      </tr>
+      <tr>
+        <td>Bill Gates</td>
+        <td>555 77 854</td>
+        <td>555 77 855</td>
+      </tr>
+
+    </table>
+-->
+  </body>
+</html>
