@@ -5,8 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tame Formación</title>
+  <style>
+    :root {
+      --borde : solid;
+      --guiones : solid solid dashed;
+      --puntos : solid solid dotted;
+    }
+    p.solido {
+      border-style: var(--borde);
+    }
+    p.guiones {
+      border-style: var(--guiones);
+    }
+    p.puntos {
+      border-style: var(--puntos);
+    }
+  </style>
 </head>
 <body>
-  
+  <p class="solido">Prueba</p>
+  <p class="guiones">Prueba</p>
+  <p class="puntos">Prueba</p>
 </body>
 </html>

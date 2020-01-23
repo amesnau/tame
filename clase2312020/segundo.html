@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tame Formación</title>
+  <style>
+    :root {
+      --borde : solid;
+      --externo : inset thick;
+      --unColor : #0000FF;
+      --dosColores : #FF0000 #0000FF;
+      --tresColores : #FF0000 #00FF00 #0000FF;
+      --cuatroColores: #FF0000 #00FF00 #0000FF rgb(250,0,255);
+    }
+    p {
+      border-style: var(--borde);
+/*      caso para utilizar definiendo outline style
+      outline-style: var(--borde);*/
+      outline: var(--externo);
+      outline-width: 15px;
+      margin: 100px;
+      text-align: center;
+    }
+    p.borde1 {
+      border-color: var(--unColor);
+    }
+    p.borde2 {
+      border-color: var(--dosColores);
+    }
+    p.borde3 {
+      border-color: var(--tresColores);
+    }
+    p.borde4 {
+      border-color: var(--cuatroColores);
+    }
+  </style>
+</head>
+<body>
+  <p class="borde1">cantidad de colores 1</p>
+  <p class="borde2">cantidad de colores 2</p>
+  <p class="borde3">cantidad de colores 3</p>
+  <p class="borde4">cantidad de colores 4</p>
+</body>
+</html>
