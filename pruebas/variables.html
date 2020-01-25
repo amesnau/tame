@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Tame Formation</title>
+  <style>
+    .container {
+      --bg-pseudo : hsl(127, 100%, 50%); /* Colocamos un color por defecto */
+      display         : flex;
+      justify-content : center;
+      align-items     : center;
+      width           : 50px;
+      height          : 50px;
+      margin          : 0 auto;
+      background      : hsl(240, 70%, 60%);
+    }
+
+    /* Clases que asignan el color a la variable */
+    .container.green {
+      --bg-pseudo : hsl(127, 100%, 50%);
+    }
+
+    .container.red {
+      --bg-pseudo : hsl(0, 100%, 54%);
+    }
+
+    .container.orange {
+      --bg-pseudo : hsl(23, 100%, 54%);
+    }
+
+    .container.yellow {
+      --bg-pseudo : hsl(50, 100%, 54%);
+    }
+
+    .container::before {
+      content    : '';
+      display    : block;
+      width      : 20px;
+      height     : 20px;
+      background : var(--bg-pseudo);
+    }  </style>
+  </head>
+  <body>
+    <button class="button center" id="button">Cambiar valor de la variable</button>
+    <div class="container" id="container">
+      <a href="http://www.google.com">Ir a google</a>
+    </div>
+    <script>
+/*      addEvent(window, "load", sayHi);
+      function sayHi() {
+        alert("Hello there, stranger!");
+      }*/
+      addEvent(window, "load", function () {
+        var links = document.getElementsByTagName("a");
+        for (var i=0; i<links.length; i++)
+            {console.log(links.length);
+            addEvent(links[i], "click", function () {
+            alert("NOPE! I won't take you there!");
+
+            // This line's support added through the addEvent function. See below.
+            evt.preventDefault();
+          });
+        }
+      });
+      let container  = document.getElementById('container'),
+      button     = document.getElementById('button'),
+      // Arreglo que contiene el nombre de las clases que reasignan el valor de la variable CSS
+      colorClass = ['green', 'red', 'orange', 'yellow']
+
+      // Función para obtener un color aleatorio del arreglo
+      const getColorClass = () => {
+        let random = Math.round(Math.random() * (colorClass.length - 1))
+        return colorClass[random]
+      }
+
+      // Asignamos el color aleatorio a la viaable
+      button.addEventListener('click', () => {
+        colorClass.map(color => container.classList.remove(color))
+        container.classList.add(getColorClass())
+      })
+    </script>
+    </body>
+    </html>

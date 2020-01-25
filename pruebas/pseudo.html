@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Pruebas</title>
+  <style>
+    :checked ~ * {
+      color: red;
+    }
+    :checked ~ p {
+      display: block;
+    }
+    :checked ~ ul {
+      display: block;
+    }
+    input[required] + label {
+      text-decoration: underline;
+      font-size: 2cm;
+      color: #ff0000;
+    }
+    .notvisible {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <label>Indique a continuación si selecciona o no</label>
+    <input type="checkbox" checked="">
+    <p class="notvisible">Será seleccionado</p>
+    <p class="notvisible">Será seleccionado</p>
+    <ul class="notvisible">
+      <li>li1</li>
+      <li>li2</li>
+    </ul>
+    <p class="notvisible">Será seleccionado</p>
+  </section>
+  <p>No será seleccionado</p>
+  <form>
+    <input type="text" id="input0" required>
+    <label for="input0">una etiqueta</label>
+
+    <textarea rows="2" cols="50" id="ta0">No requerida</textarea>
+    <label for="ta0">una etiqueta para textarea</label>
+  </form>
+</body>
+</html>
