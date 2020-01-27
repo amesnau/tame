@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tame Formación</title>
+    <style>
+        [data-vegetable] {
+        color: green;
+        }
+        [data-vegetable~="spicy"] {
+            color: red;
+        }
+        [data-vegetable~="liquid"] {
+            color: blue;
+        }
+        [data-meat] {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+Ingredientes de mi receta:
+    <ul>
+        <li data-quantity="1kg" data-vegetable>Tomates</li>
+        <li data-quantity="3" data-vegetable>Cebollas</li>
+        <li data-quantity="3" data-vegetable>Ajo</li>
+        <li data-quantity="700g" data-vegetable="hot spicy like chili">Pimiento rojo</li>
+        <li data-quantity="2kg" data-meat>Pollo</li>
+        <li data-quantity="optional" data-meat>bacon</li>
+        <li data-quantity="optional" data-vegetable="liquid">Aceite de oliva</li>
+        <li data-quantity="25cl" data-vegetable="liquid">vino blanco</li>
+    </ul>
+</body>
+</html>
