@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="imgbox1">
+        box 1 <br>
+        <img src="../images/klematis_small.jpg" alt="klematis pequeña" height="90" width="107" /> <br>
+        <input onclick="eliminarElemento()" type="button" value="Borrar" />
+    </div>
+    <div id="imgbox2">
+        box 2 <br>
+        <img src="../images/klematis_small.jpg" alt="Klematis pequeña" height="80" width="107">
+        <input onclick="cambiarVisibilidad()" type="button" value="Esconder" />
+    </div>
+    <div>
+        box 3 <br>
+        <img src="../images/klematis3_small.jpg" alt="Klematis pequeña" height="90" width="116">
+        <input onclick="reestablecerElementos()" type="button" value="Restablecer" />
+    </div>
+    <script>
+        function eliminarElemento() {
+            document.getElementById("imgbox1").style.display = "none";
+        }
+
+        function cambiarVisibilidad() {
+            document.getElementById("imgbox2").style.display = "hidden";
+        }
+
+        function reestablecerElementos() {
+            document.getElementById("imgbox1").style.display = "block";
+            document.getElementById("imgbox2").style.visibility = "visible";
+        }
+    </script>
+</body>
+
+</html>
