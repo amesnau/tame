@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <style>
+        li {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li id="box1">
+            <a href="javascript:displayBlock();">Block</a>
+        </li>
+        <li>
+            <a href="javascript:displayInline();">Inline</a>
+        </li>
+    </ul>
+    <!-- <input onclick="displayBlock() " type="button " value="Block ">
+    <input onclick="displayInline() " type="button " value="Inline "> -->
+
+    <script>
+        function displayBlock() {
+            document.getElementById("box1").style.display = "block";
+        }
+
+        function displayInline() {
+            document.getElementById("box1").style.display = "inline";
+        }
+    </script>
+</body>
+
+</html>
