@@ -29,6 +29,14 @@
                 line-height: 75px;
                 font-style: 30px;
             }
+
+            /* Small screens */
+            @media all and (max-width: 500px) {
+                .flex-container {
+                    /* On small screens, we are no longer using row direction but column */
+                    flex-direction: column;
+                }
+            }
         </style>
 
     </head>
