@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Tame Formación</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+        <style>
+            .flex-container {
+                display: flex;
+                align-items: stretch;
+                /* justify-content: center;
+                align-items: center;
+                height: 300px; */
+                /* align-items: baseline; */
+                background-color: #f1f1f1;
+            }
+
+            .flex-container>div {
+                background-color: dodgerblue;
+                color: white;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-style: 30px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>Centrado Perfecto</h1>
+        <p>Un contenedor con las propiedades justify-content y align-items
+            establecidas a <em>center</em> alinearà los elementos en el centro
+            (en ambos ejes)</p>
+        <div class="flex-container">
+            <div style="flex-grow: 1;">1</div>
+            <div style="flex-grow: 1;">2</div>
+            <div style="flex-grow: 8;">3</div>
+        </div>
+    </body>
+
+</html>
