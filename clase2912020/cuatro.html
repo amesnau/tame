@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style type="text/css">
+            div.relativo {
+                position: relative;
+                width: 400px;
+                height: 200px;
+                border: 3px solid #73ad21;
+            }
+
+            div.absoluto {
+                position: absolute;
+                top: 10px;
+                right: 40px;
+                width: 200px;
+                height: 100px;
+                border: 3px solid #73ad21;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>posición absoluta</h2>
+        <p>An element with position: absolute; is positioned relative to the
+            nearest positiones ancesto (instead of positioned relative is th
+            viewport, like fixed):</p>
+        <div class="relativo">Este div tiene posicionamiento relativo</div>
+        <div class="absoluto">Este div tiene posicionamiento absoluto</div>
+    </body>
+
+</html>
