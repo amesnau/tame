@@ -45,27 +45,27 @@
               <div id="hmenu">
                 <ul>
                   <li>
-                    <a href="#">Home</a>
+                    <a href="#" onclick="home_Selection()">Home</a>
                   </li>
                   <li>
-                    <a href="menu1.html">Menu 1</a>
+                    <a href="#" onclick="menu1_Selection()">Menu 1</a>
                   </li>
                   <li>
-                    <a href="menu2.html">Menu 2</a>
+                    <a href="#" onclick="menu2_Selection()">Menu 2</a>
                   </li>
                   <li>
-                    <a href="menu3.html">Menu 3</a>
+                    <a href="#" onclick="menu3_Selection()">Menu 3</a>
                   </li>
                 </ul>
               </div>
             </nav>
             <div class="clear"></div>
           </header>
-          <a href="home.html">
+          <a href="#" onclick="home_Selection()">
             <div id="banner">
               <div id="tagline">
                 <h1>Massage and Spa Center</h1>
-                <p>HOME MENU</p>
+                <p id="tipo_Menu"></p>
                 <input type="button" class="cta pie" value="Call Us..." />
               </div>
             </div>
@@ -203,6 +203,20 @@
         <div id="container-bottom"></div>
       </div>
     </div>
+    <script>
+    function home_Selection() {
+      document.getElementById("tipo_Menu").innerHTML = "Home Menu"
+    }
+    function menu1_Selection() {
+      document.getElementById("tipo_Menu").innerHTML = "Menu1 Menu"
+    }
+    function menu2_Selection() {
+      document.getElementById("tipo_Menu").innerHTML = "Menu2 Menu"
+    }
+    function menu3_Selection() {
+      document.getElementById("tipo_Menu").innerHTML = "Menu3 Menu"
+    }
+    </script>
   </body>
 
 </html>
