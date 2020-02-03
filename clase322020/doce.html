@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            img {
+                width: 120px;
+                margin: 20px;
+            }
+
+            .clip-circle {
+                clip-path: circle(60px at center);
+                -webkit-clip-path: circle(60px at center);
+            }
+
+            .clip-ellipse {
+                clip-path: ellipse(60px 40px at center);
+                -webkit-clip-path: ellipse(60px 40px at center);
+
+            }
+
+            .clip-polygon {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 71%, 72% 80%, 58% 100%, 39% 79%, 8% 68%);
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 71%, 72% 80%, 58% 100%, 39% 79%, 8% 68%);
+            }
+
+            body {
+                background: linear-gradient(to bottom, rgb(175, 136, 28), rgb(153, 134, 25));
+            }
+
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+            }
+
+            .clip-path {
+                clip-path: inset(100ps 50px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg"
+            alt="">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg"
+            alt="" class="clip-circle">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg"
+            alt="" class="clip-ellipse">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg"
+            alt="" class="clip-polygon">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg"
+            alt="">
+    </body>
+
+</html>
