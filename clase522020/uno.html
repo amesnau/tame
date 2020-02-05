@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            p::before {
+                content: "Lee esto - ";
+                color: red;
+                font-family: monospace;
+                font-variant-caps: small-caps;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>My name is Donald</p>
+        <p>I live in Ducksburg</p>
+        <p><strong>Note:</strong> For this selector to work in IE8, a
+            !DOCTYPE must be declared, and you must use the old, single-colon
+            CSS2 syntax (:before instead of ::before).
+        </p>
+    </body>
+
+</html>
