@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background: red;
+                -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+                transition: width 2s, height 2s, transform 2s;
+            }
+
+            div:hover {
+                width: 200px;
+                height: 200px;
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <p><strong>Nota: </strong>Esto no funciona en Internet Explorer 9 y
+            anteriores.</p>
+        <div>Pasa el ratòn por encima del div para ver la transición!!</div>
+    </body>
+
+</html>
