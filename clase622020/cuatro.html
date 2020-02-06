@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            :root {
+                margin-top: 80px;
+                margin-left: 80px;
+                --tamañoCuadrado: 150px;
+            }
+
+            .cuadrado {
+                width: var(--tamañoCuadrado);
+                height: var(--tamañoCuadrado);
+                background-color: #428bca;
+                border: 3px solid #555;
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                transform: rotate(45deg);
+
+            }
+
+            .imagen {
+                border-radius: 50%;
+                width: var(--tamañoCuadrado);
+                height: var(--tamañoCuadrado);
+            }
+
+            .imagen {
+                -moz-transition: all 0.25s ease-out;
+                -ms-transition: all 0.25s ease-out;
+                -o-transition: all 0.25s ease-out;
+                -webkit-transition: all 0.25s ease-out;
+            }
+
+            .imagen:hover {
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="cuadrado">
+            <a href="https://www.google.com">
+                <img src="../images/klematis_big.jpg" alt="klematis"
+                    class="imagen">
+            </a>
+        </div>
+    </body>
+
+</html>

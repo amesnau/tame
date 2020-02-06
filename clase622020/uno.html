@@ -63,14 +63,34 @@
             #next a:hover {
                 background: url("../images/img_navsprites_hover.gif") -91px -45px;
             }
+
+            .prueba {
+                -moz-transition: all 0.25s ease-out;
+                -ms-transition: all 0.25s ease-out;
+                -o-transition: all 0.25s ease-out;
+                -webkit-transition: all 0.25s ease-out;
+            }
+
+            .prueba:hover {
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+            }
         </style>
     </head>
 
     <body>
         <ul id="navlist">
-            <li id="home"><a href="https://www.google.com"></a></li>
-            <li id="prev"><a href="https://www.google.com"></a></li>
-            <li id="next"><a href="https://www.google.com"></a></li>
+            <li id="home"><a href="https://www.google.com"><img
+                        src="../images/img_navsprites_hover1.gif" alt=""
+                        class="prueba"></a></li>
+            <li id="prev"><a href="https://www.google.com"><img
+                        src="../images/img_navsprites_hover2.gif" alt=""
+                        class="prueba"></a></li>
+            <li id="next"><a href="https://www.google.com"><img
+                        src="../images/img_navsprites_hover3.gif" alt=""
+                        class="prueba"></a></li>
         </ul>
     </body>
 
