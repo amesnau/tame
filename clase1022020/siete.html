@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Imágenes Polaroid y rotación hover</title>
+        <style>
+            :root {
+                --posInicial1: 10deg;
+                --posInicial2: -10deg;
+                --posFinal1: -10deg;
+                --posFinal2: 10deg;
+            }
+
+            body {
+                margin: 30px;
+                background-color: #e9e9e9;
+            }
+
+            div.polaroid {
+                width: 294px;
+                transition: all 0.5s ease-in-out;
+                padding: 10px 10px 20px 10px;
+                border: 1px solid #bfbfbf;
+                background-color: #fff;
+                box-shadow: 2px 2px 3px #aaaaaa;
+            }
+
+            div.rotate_left {
+                float: left;
+                -ms-transform: rotate(var(--posInicial1));
+                -moz-transform: rotate(var(--posInicial1));
+                -o-transform: rotate(var(--posInicial1));
+                -webkit-transform: rotate(var(--posInicial1));
+                transform: rotate(var(--posInicial1));
+            }
+
+            .polaroid {
+                margin: 50px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            div.rotate_right {
+                float: left;
+                -ms-transform: rotate(var(--posInicial2));
+                -moz-transform: rotate(var(--posInicial2));
+                -o-transform: rotate(var(--posInicial2));
+                -webkit-transform: rotate(var(--posInicial2));
+                transform: rotate(var(--posInicial2));
+            }
+
+            div.rotate_right:hover {
+                float: left;
+                -ms-transform: rotate(14deg);
+                -moz-transform: rotate(14deg);
+                -o-transform: rotate(14deg);
+                -webkit-transform: rotate(var(--posFinal2));
+                transform: rotate(14deg);
+            }
+
+            div.rotate_left:hover {
+                float: left;
+                -ms-transform: rotate(-14deg);
+                -moz-transform: rotate(-14deg);
+                -o-transform: rotate(-14deg);
+                -webkit-transform: rotate(var(--posFinal1));
+                transform: rotate(-14deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="polaroid rotate_left">
+            <img src="../images/pulpitrock.jpg" alt="" width="284" height="213">
+            <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+        </div>
+
+        <div class="polaroid rotate_right">
+            <img src="../images/cinqueterre.jpg" alt="" width="284"
+                height="213">
+            <p>Monterosso al Mare. One of the five villages in Cinque Terre.</p>
+        </div>
+    </body>
+
+</html>

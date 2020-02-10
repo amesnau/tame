@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Imágenes Polaroid y rotación hover</title>
+        <style>
+            body {
+                margin: 150px;
+                background-color: #e9e9e9;
+            }
+
+            div.polaroid {
+                width: 294px;
+                transition: all 0.5s ease-in-out;
+                padding: 10px 10px 20px 10px;
+                border: 1px solid #bfbfbf;
+                background-color: #fff;
+                box-shadow: 2px 2px 3px #aaaaaa;
+            }
+
+            .polaroid {
+                margin: 50px;
+                transition: all 0.5s ease-in-out;
+            }
+
+            div.rotate_left {
+                float: left;
+                -ms-transform: rotate(7deg);
+                -moz-transform: rotate(7deg);
+                -o-transform: rotate(7deg);
+                -webkit-transform: rotate(7deg);
+                transform: rotate(7deg);
+            }
+
+            div.rotate_right {
+                float: left;
+                -ms-transform: rotate(-7deg);
+                -moz-transform: rotate(-7deg);
+                -o-transform: rotate(-7deg);
+                -webkit-transform: rotate(7deg);
+                transform: rotate(-7deg);
+            }
+
+            .polaroid:hover {
+                transform: scale(1.5);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="polaroid rotate_left">
+            <img src="../images/pulpitrock.jpg" alt="" width="284" height="213">
+            <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+        </div>
+
+        <div class="polaroid rotate_right">
+            <img src="../images/cinqueterre.jpg" alt="" width="284"
+                height="213">
+            <p>Monterosso al Mare. One of the five villages in Cinque Terre.</p>
+        </div>
+    </body>
+
+</html>

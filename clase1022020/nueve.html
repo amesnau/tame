@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cosas distintas hover sobre contenedor</title>
+        <style>
+            #transDemo4 {
+                width: 400px;
+                height: 190px;
+                margin: 0 auto 10px;
+                border: 1px solid #aaa;
+                padding: 10px;
+            }
+
+            #transDemo4 div {
+                -webkit-transition: all 2s ease-in-out;
+                -moz-transition: all 2s ease-in-out;
+                -ms-transition: all 2s ease-in-out;
+                transition: all 2s ease-in-out;
+                width: 70px;
+                height: 130px;
+                margin: 10px 20px;
+                padding: 10px;
+                border: 1px solid #00f;
+                float: left;
+            }
+
+            #transDemo4:hover #rotateX {
+                -webkit-transform: rotateX(180deg);
+                -moz-transform: rotateX(180deg);
+                -ms-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+            }
+
+            #transDemo4:hover #rotateY {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+
+            #transDemo4:hover #rotateZ {
+                -webkit-transform: rotateZ(180deg);
+                -moz-transform: rotateZ(180deg);
+                -ms-transform: rotateZ(180deg);
+                transform: rotateZ(180deg);
+            }
+
+            #rotateKK {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+
+            #transDemo4:hover #rotateKK {
+                -webkit-transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+                -moz-transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+                -ms-transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+                transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="transDemo4">
+            <div id="rotateX">Rotate X</div>
+            <div id="rotateY">Rotate Y</div>
+            <div id="rotateZ">Rotate Z</div>
+            <p>Pasa el ratón por encima</p>
+            <div id="rotateKK">Rotate KK</div>
+        </div>
+
+    </body>
+
+</html>
