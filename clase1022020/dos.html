@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bola en contenedor</title>
+        <style>
+            :root {
+                --ballHeight: 50px;
+                --ballWidth: 50px;
+            }
+
+            @keyframes slide {
+                0% {
+                    left: 0;
+                    top: 0;
+                }
+
+                50% {
+                    left: 244px;
+                    top: 100px;
+                }
+
+                100% {
+                    left: 400px;
+                    top: 0;
+                }
+            }
+
+            .stage {
+                background: #eaeaed;
+                border-radius: 6px;
+                height: 150px;
+                position: relative;
+                width: calc(100% - 72%);
+            }
+
+            .stage:hover .ball {
+                animation-name: slide;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+                animation-delay: .2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            .ball {
+                background: #2db34a;
+                border-radius: 50%;
+                height: var(--ballHeight);
+                position: absolute;
+                width: var(--ballWidth);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="stage">
+            <figure class="ball"></figure>
+        </div>
+    </body>
+
+</html>

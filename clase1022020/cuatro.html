@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Perspectiva</title>
+        <style>
+            #div1 {
+                position: relative;
+                height: 150px;
+                width: 200px;
+                margin: 50px;
+                padding: 10px;
+                border: 1px solid #000;
+                -webkit-perspective: 150px;
+                perspective: 150px;
+            }
+
+            #div2 {
+                padding: 50px;
+                position: absolute;
+                border: 1px solid #000;
+                background-color: #f00;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <p><strong>Nota:</strong> No funciona en IE9.</p>
+        <div id="div1">
+            <div id="div2">Ola, k ase?</div>
+        </div>
+    </body>
+
+</html>
