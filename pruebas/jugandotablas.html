@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        :root {
+            --ancho: 100% - 60%;
+            --altura: 100px - 50px;
+            --relleno: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        tr,
+        td {
+            width: calc(var(--ancho));
+            border: 3px solid rgb(247, 25, 25);
+        }
+
+        /* table, */
+        th {
+            height: calc(var(--altura));
+        }
+
+        td {
+            border-collapse: collapse;
+            height: calc(var(--altura));
+            padding: var(--relleno);
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #fff;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ccc;
+        }
+
+        th {
+            background-color: green;
+            color: aliceblue;
+        }
+
+        p {
+            width: calc(var(--ancho));
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vero?
+        Exercitationem quasi possimus assumenda, qui asperiores culpa fugit
+        rerum autem deleniti. Aperiam sed expedita natus totam placeat autem
+        rem? Fugiat.</p>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+        </tr>
+    </table>
+</body>
+
+</html>
