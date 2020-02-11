@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .div1 {
+            grid-area: 1 / 3 / 2 / 4;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #fcd811;
+            /* justify-self: start; */
+            /* align-self: center; */
+        }
+
+        .div2 {
+            grid-area: 1 / 4 / 2 / 6;
+            justify-self: right;
+            align-self: center;
+        }
+
+        .div3 {
+            grid-area: 1 / 1 / 2 / 2;
+            align-self: center;
+        }
+
+        .div4 {
+            grid-area: 2 / 1 / 5 / 5;
+        }
+
+        .div5 {
+            grid-area: 2 / 5 / 5 / 6;
+        }
+
+        .div6 {
+            grid-area: 5 / 1 / 6 / 6;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* background-color: white; */
+            text-decoration: underline;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: inline-block;
+            /* background-color: rgb(175, 199, 216); */
+            color: #ff0000;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            /* border: 1px solid white; */
+        }
+
+        li a:hover {
+            color: #0000ff;
+        }
+
+        h1.header {
+            /* text-align: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="div1">
+            <p>Boreal Design</p>
+        </div>
+
+        <div class="div2">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <div class="div3">
+            <img src="../images/logo.png" alt="Logo Borel Design">
+        </div>
+        <div class="div4">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                ipsa,
+                dolorum modi, fugit nam aliquam reprehenderit consequuntur omnis
+                et
+                nobis praesentium inventore odit. Distinctio, quo. Dolore
+                praesentium excepturi sed nisi.
+            </p>
+        </div>
+        <div class="div5">
+            <p>Side bar</p>
+        </div>
+        <div class="div6">
+            <footer>Footer</footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
