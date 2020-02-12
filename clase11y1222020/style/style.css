@@ -32,7 +32,7 @@ h1 {
 
 #main-nav {
     height: 50px;
-    padding-left: 11px;
+    padding-left: 6px;
     overflow: hidden;
 }
 
@@ -91,12 +91,12 @@ h1 {
 #sidebar-a {
     float: right;
     width: 380px;
-    line-height: 10px;
+    line-height: 20px;
 }
 
 #content {
     margin-right: 200px;
-    line-height: 10px;
+    line-height: 20px;
 }
 
 #header {
@@ -127,7 +127,7 @@ h1 {
 }
 
 #main-nav dt a:hover {
-    background-position: 0 -50px;
+    background-position: 0 bottom;
 }
 
 #main-nav dt#about, #main-nav dt#about a {
@@ -136,20 +136,35 @@ h1 {
 }
 
 #main-nav dt#services, #main-nav dt#services a {
-    width: 84px;
+    width: 79px;
     background-image: url("../images/nav/services.gif");
 }
 
 #main-nav dt#portfolio, #main-nav dt#portfolio a {
-    width: 95px;
+    width: 90px;
     background-image: url("../images/nav/portfolio.gif");
 }
 
 #main-nav dt#contact, #main-nav dt#contact a {
-    width: 106px;
+    width: 100px;
     background-image: url("../images/nav/contact2.gif");
 }
 
 body.about dt#about, body.about dt#about a, body.services dt#services, body.services dt#services a, body.portfolio dt#portfolio, body.portfolio dt#portfolio a, body.contact dt#contact, body.contact dt#contact a {
     background-position: 0 -100px;
+}
+
+body.services #header {
+    height: 150px;
+    background: #db6d16 url("../images/nav/services.jpg");
+}
+
+body.portfolio #header {
+    height: 150px;
+    background: #db6d16 url("../images/nav/portfolio.jpg");
+}
+
+body.contact #header {
+    height: 150px;
+    background: #db6d16 url("../images/nav/contact.jpg");
 }
