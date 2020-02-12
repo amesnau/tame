@@ -1,0 +1,27 @@
+    body {
+        background-color: green;
+    }
+
+    .uno {
+        width: 50%;
+        height: 200px;
+        margin: auto;
+        background-color: yellow;
+    }
+
+    .dos {
+        display: none;
+    }
+
+    @media (min-width: 600px) {
+        body {
+            background-color: #f00;
+        }
+        .uno {
+            background: green;
+        }
+        .dos {
+            display: initial;
+            color: white;
+        }
+    }

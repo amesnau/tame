@@ -11,12 +11,15 @@ html, body {
     grid-template-rows: .7fr 2fr 3fr .8fr;
 }
 
-.container>div {
+/* .container>div {
     border: 1px dashed #888;
-}
+} */
 
 .navigation {
     grid-area: navigation;
+    margin: 0;
+    padding: 0;
+    align-self: end;
 }
 
 .banner {
@@ -43,9 +46,8 @@ html, body {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
     overflow: hidden;
-    text-decoration: underline;
 }
 
 li {
@@ -54,10 +56,7 @@ li {
 
 li a {
     display: inline-block;
-    color: #ff0000;
-    text-align: center;
     padding: 12px;
-    text-decoration: none;
 }
 
 .banner_derecha {
@@ -75,8 +74,12 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+.footer a:hover {
     color: coral;
+}
+
+.navigation a:hover {
+    background-position: 0 139%;
 }
 
 .navigation li#about, .navigation li#about a {
