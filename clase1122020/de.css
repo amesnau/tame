@@ -1,15 +1,14 @@
 html, body {
     width: 100%;
-    height: 100%;
 }
 
 .container {
     display: grid;
     width: 760px;
-    height: 100%;
+    height: 50%;
     grid-template-areas: "navigation navigation" "banner banner" "main sidebar" "footer footer";
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 2fr 3fr .5fr;
+    grid-template-rows: .7fr 2fr 3fr .8fr;
 }
 
 .container>div {
@@ -82,20 +81,24 @@ a:hover {
 
 .navigation li#about, .navigation li#about a {
     width: 71px;
-    background-image: url("../images/nav/about.gif");
+    height: 50px;
+    background-image: url("images/nav/about.gif");
 }
 
 .navigation li#services, .navigation li#services a {
     width: 84px;
-    background-image: url("../images/nav/services.gif");
+    height: 50px;
+    background-image: url("images/nav/services.gif");
 }
 
 .navigation li#portfolio, .navigation li#portfolio a {
     width: 95px;
-    background-image: url("../images/nav/portfolio.gif");
+    height: 50px;
+    background-image: url("images/nav/portfolio.gif");
 }
 
 .navigation li#contact, .navigation li#contact a {
-    width: 106px;
-    background-image: url("../images/nav/contact2.gif");
+    width: 95px;
+    height: 50px;
+    background-image: url("images/nav/contact2.gif");
 }
