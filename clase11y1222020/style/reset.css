@@ -94,7 +94,7 @@ nav {
 }
 
 #menu-icon {
-    display: hidden;
+    display: none;
     width: 40px;
     height: 40px;
     background: #4c8fec url('../images/webresponsive/menu-icon.png');
@@ -107,4 +107,9 @@ a:hover#menu-icon {
 
 ul {
     list-style: none;
+}
+
+a:hover#menu-icon {
+    background-color: #444;
+    border-radius: 4px 4px 0 0;
 }
