@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+         var nombre = "";
+         while (nombre == null || nombre == "") {
+            nombre = prompt("Coloque su nombre:", "nombre");
+            if (nombre == null || nombre == "") {
+               mensaje = "Has cancelado o introducido el nombre vacío";
+            }
+         }
+      </script>
+   </head>
+
+   <body>
+      <script>
+         document.write('<img src="gracias.gif" width="150" alt="imagen de gracias"/>');
+         document.write("<h2>Hola, " + nombre + ". Bienvenido al curso de JavaScript</h2>");
+      </script>
+      Luego escribo esto
+   </body>
+
+</html>
