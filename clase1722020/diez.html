@@ -6,8 +6,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <script>
+         var mensaje;
          var x = 1;
-         alert('cabecera=' + x);
+         mensaje = prompt('Que quieres que aparezca en tu página');
       </script>
    </head>
 
@@ -15,9 +16,8 @@
       <script>
          x += 1;
          alert('cuerpo=' + x);
-         document.write("<h1> Este es ");
+         document.write("<h1> Este es tu mensaje: " + mensaje);
       </script>
-      mi título
       <script>
          document.write("</h1>");
          x += 1;

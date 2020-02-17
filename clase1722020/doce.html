@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         strong {
+            font-size: 1.4rem;
+            animation: frank 5s infinite;
+         }
+
+         @keyframes frank {
+            50% {
+               font-size: 2.4rem;
+            }
+
+         }
+      </style>
+   </head>
+
+   <body>
+      <script>
+         var index = 0
+         var cars = new Array("", "", "", "", "", "", "");
+         for (let index = 0; index < cars.length; index++) {
+            cars[index] = prompt("Indique la marca del vehículo: ");
+            // if (index == 0) {
+            //    cars[index] = "Saab";
+            // } else if (index == 1) {
+            //    cars[index] = "Volvo";
+            // } else {
+            //    cars[index] = "BMW";
+            // }
+         }
+         // var dia = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
+         for (let index = 0; index < cars.length; index++) {
+            const element = cars[index];
+            document.write("Posición " + index + " del vector es " + "<strong>" + element + "</strong>" + "<br/>");
+         }
+         document.write("esto está en el vector=" + cars);
+      </script>
+   </body>
+
+</html>
