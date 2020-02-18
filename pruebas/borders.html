@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.uno {
+            position: absolute;
+            top: 3rem;
+            left: 20%;
+            /* width: 50%; */
+            border-top: 1px solid red;
+            border-right: 1px dotted black;
+            border-bottom: 1px dashed green;
+            border-left: 1px solid lightblue;
+            outline: 4px ridge blue;
+            animation: mymove 5s infinite;
+        }
+
+        @keyframes mymove {
+            20% {
+                outline-offset: 50px;
+            }
+        }
+
+        div.uno:hover {
+            border-style: solid dashed;
+            border-width: 2px;
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>prueba de como lo hace</h1>
+    <div>
+        <div>Prueba de varios divs
+            <div class="uno">Este es mi div</div>
+        </div>
+    </div>
+</body>
+
+</html>

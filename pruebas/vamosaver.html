@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div.a {
+            position: relative;
+            top: -20px;
+            width: 400px;
+            height: 200px;
+            border: 3px solid red;
+            float: right;
+        }
+
+        div.b {
+            position: absolute;
+            top: -20px;
+            border: 3px solid blue;
+        }
+
+        div.c {
+            position: absolute;
+            top: 150px;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The top Property</h1>
+    <div style="float:left;width: 400px;height: 200px;border: 3px solid red;">
+        One more test</div>
+
+    <div class="a">This div element has position: relative;
+        <div class="b">This div element has position: absolute and top: -20px.
+        </div>
+        <div class="c">This div element has no parent element, has position:
+            absolute and is placed 150 pixels down from the top of the document
+            body.</div>
+    </div>
+
+
+</body>
+
+</html>
