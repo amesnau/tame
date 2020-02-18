@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caja {
+            background-color: #0f0;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: mymove 5s infinite;
+        }
+
+        @keyframes mymove {
+            0% {
+                top: 0;
+                left: 0;
+                background-color: #0f0;
+            }
+
+            25% {
+                top: 0;
+                left: 100px;
+                background-color: #f00;
+            }
+
+            50% {
+                top: 100px;
+                left: 100px;
+                background-color: #00f;
+            }
+
+            75% {
+                top: 100px;
+                left: 0;
+                background-color: #ff0;
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+                background-color: #0f0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja"></div>
+</body>
+
+</html>

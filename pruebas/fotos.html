@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .flotar {
+            position: relative;
+            float: left;
+            top: 2rem;
+            left: 2rem;
+            padding: 2rem;
+            /* border: 2px solid black; */
+        }
+
+        .rotadaderecha {
+            width: 7.5rem;
+            height: 10rem;
+            transform: rotate(7deg);
+        }
+
+        .rotadaizquierda {
+            width: 7.5rem;
+            height: 10rem;
+            transform: rotate(-7deg);
+        }
+
+        img.rotadaizquierda:hover {
+            transform: rotate(7deg);
+        }
+
+        img.rotadaderecha:hover {
+            transform: rotate(-7deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/cinqueterre.jpg" alt="cinqueterre" id="myimage1"
+        class="rotadaizquierda flotar"
+        onclick="document.getElementById('myimage1').style.transform = 'scale(2,2)'">
+    <img src="../images/pulpitrock.jpg" alt="pulpitrock"
+        class="rotadaderecha flotar">
+</body>
+
+</html>
