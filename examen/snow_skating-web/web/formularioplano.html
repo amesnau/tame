@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <style>
+         .entradadatos {
+            width: 30rem;
+         }
+
+         div {
+            position: absolute;
+            left: 30%;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div>
+         <form action="https://www.w3schools.com/action_page2.php" method="GET">
+            <h1>Mi Formulario</h1>
+            <fieldset class="entradadatos">
+               <legend> Información Personal</legend>
+               <p><strong>Nombre: <br></strong><input type="text"
+                     placeholder="Nombre" name="nombre" value="Nombre"></p>
+               <p><strong>Apellidos: <br></strong><input type="text"
+                     name="apellidos" placeholder="Apellidos" value="Apellidos">
+               </p>
+               <input type="radio" name="genero" value="femenino">
+               <label for="genero">Femenino</label> <br>
+               <input type="radio" value="masculino" name="genero">
+               <label for="genero">Masculino</label>
+            </fieldset>
+            <br><br>
+            <fieldset class="entradadatos">
+               <legend>Información vehículo/carnet de conducir</legend>
+               <input type="checkbox" name="vehiculo">
+               <label for="vehiculo">Vehículo
+                  propio:</label><br>
+               <input type="checkbox" name="carnet">
+               <label for="carnet">Carnet de
+                  conducir</label> <br>
+
+            </fieldset>
+            <br><br>
+            <input type="submit" value="Submit " />
+            <a href="index.html"><input type="button" value="Regresar"></a>
+         </form>
+      </div>
+   </body>
+
+</html>

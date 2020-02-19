@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         [name="correo"],
+         [name="mensaje"]
+      </style>
+   </head>
+
+   <body>
+      <form action="/yoquese.php" name="dataentry">
+         <fieldset>
+            <label for="correo"><input type="checkbox" name="switchCorreo"
+                  id="swCorreo" onchange="myFunction()">Desea enviar
+               correo</label>
+            Indique su correo electrónico: <br>
+            <input type="email" name="correo" id="suCorreo">
+            Indique el texto de su mensaje:
+            <textarea name="mensaje" id="suMensaje" cols="30"
+               rows="10">Contenido de su mensaje</textarea>
+         </fieldset>
+      </form>
+      <a href=""></a>
+      <button></button>
+      <script>
+         function myFunction() {
+            x = document.getElementById("swCorreo");
+            if (x.checked) {
+               document.getElementById(suCorreo).disabled;
+               document.getElementById(suMensaje).disabled;
+            } else {
+               document.getElementById(suCorreo).enabled;
+               document.getElementById(suMensaje).enabled;
+            }
+         }
+
+      </script>
+   </body>
+
+</html>
