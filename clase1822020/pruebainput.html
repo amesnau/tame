@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        [name="message"] {
+            width: 20rem;
+            height: 20rem;
+            background-color: rgb(223, 248, 242);
+        }
+
+        #boxUno {
+            width: 22rem;
+        }
+
+        .derecha {
+            position: relative;
+            float: right;
+        }
+
+        [name="message"]:disabled {
+            background-color: rgb(243, 164, 17);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="derecha">
+
+        <h2>Styling Textarea</h2>
+
+        <p>Use CSS to change the size of the textarea:</p>
+        <form action="/action_page.php">
+            <fieldset id="boxUno">
+                <legend>
+                    <label>
+                        <input type="checkbox" checked id="pruebaUno"
+                            onchange="myFunction()">Algún comentario?
+                    </label>
+                </legend>
+                <textarea id="text"
+                    name="message">Indique aquí sus comentarios</textarea>
+                <br>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </div>
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("text");
+            if (x.disabled) {
+                x.disabled = false;
+            } else {
+                x.disabled = true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
