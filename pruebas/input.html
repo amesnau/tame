@@ -18,20 +18,20 @@
                     newsletter
                 </label>
             </legend>
-            <p>E-mail: <input id="correo" type="email" name="e-mail"></p>
+            <span>E-mail: <input id="correo" type="email" name="e-mail"> </span>
+            <span>Preferencias: <input type="text" id="preferencias"
+                    placeholder="Indique sus preferencias"
+                    title="Separe sus preferencias con comas"></span>
         </fieldset>
-        <p><input type="submit" value="Sen data"></p>
+        <p><input type="submit" value="Send data"></p>
     </form>
     <script>
         // mejorar la función para que contemple la selección en el checkbox
         function switchFieldset() {
             var x = document.getElementById("correo");
-            if (x.disabled) {
-                x.disabled = false;
-            } else {
-                x.disabled = true;
-            }
-            // document.getElementById("correo").disabled = true;
+            var y = document.getElementById("preferencias");
+            x.disabled && y.disabled ? (x.disabled = false, y.disabled = false) : (x.disabled = true, y.disabled = true);
+
         }
     </script>
 </body>
