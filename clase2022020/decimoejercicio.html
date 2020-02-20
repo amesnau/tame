@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         var nombre, saludo, confianza;
+         nombre = prompt("Introduce tu nombre");
+         saludo = ((nombre == "José" || nombre == "Jose" || nombre == "Francisco") && (prompt("Tenemos confianza -Si/No-", "Si") == "Si")) ? (nombre == "José" || nombre == "Jose") ? "Hola Pepe" : "Hola Paco" : "Hola " + nombre;
+         // confianza = prompt("Tenemos confianza: (Si/No)")
+         // saludo = (nombre == "José" && confianza == "Si") ? "Hola Pepe" : (nombre == "Francisco" && confianza == "Si") ? "Hola Paco" : "Hola " + nombre;
+         alert(saludo);
+      </script>
+   </body>
+
+</html>
