@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-   </head>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
 
-   <body>
-      <script>
-         var x = 0, y = 9;
-         x = prompt("Indique primer número (0-9):")
-         y = prompt("Indique segundo número (0-9):")
-            (x > 0 && x <= 9) || (y > 0 && y < 9)) ?(x > y) ? alert(x + " > " + y) : alert(y + " > " + x);
-
-      </script>
-   </body>
+<body>
+   <script>
+      var x = 0, y = 9;
+      x = prompt("Indique primer número (0-9):");
+      y = prompt("Indique segundo número (0-9):");
+      ((x >= 0 && x <= 9) && (y >= 0 && y <= 9)) ? (x > y) ? alert("primer nro. " + x + " es mayor que segundo nro. " + y) : alert("segundo nro. " + y + " es mayor que primer nro. " + x) : alert("Error en alguno de los nros. indicados");
+   </script>
+</body>
 
 </html>
-dos números de cero a nueve y decir cual es el mayor
