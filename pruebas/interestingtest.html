@@ -4,16 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../css/sanitize.css">
     <title>Document</title>
     <style>
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto;
+            grid-template-columns: repeat(4, 1fr);
         }
 
+        @media (max-width: 1120px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 910px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 715px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
 
         div.uno {
             grid-area: auto;
@@ -23,28 +38,31 @@
             grid-area: auto;
         }
 
-
-        form {
-            width: 30%;
+        div.tres {
+            grid-area: auto;
         }
 
-        /* form.right {
-            position: relative;
-            float: right;
-            right: 20rem;
-        } */
-
-        @media (max-width: 700px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            /* form.right {
-                float: left;
-                right: 0;
-            } */
+        div.cuatro {
+            grid-area: auto;
         }
 
+        img {
+            /* Specifies that the center of each photo
+       should align with the center of the scroll
+       container in the X axis when snapping */
+            scroll-snap-align: none center;
+        }
+
+        .photoGallery {
+            width: 200px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            /* Requires that the scroll position always be
+       at a snap position when the scrolling
+       operation completes. */
+            scroll-snap-type: x mandatory;
+        }
 
         fieldset {
             display: grid;
@@ -61,17 +79,15 @@
             row-gap: 1rem;
             grid-template-columns: subgrid;
             grid-gap: inherit;
-
-
         }
     </style>
-
 </head>
 
 <body>
     <div class="container">
-
-        <div class="uno">
+        <div class="uno"><img src="../images/logo.png" alt="Boreal Design"
+                width="200px"></div>
+        <div class="dos">
             <form action="">
                 <fieldset>
                     <legend>
@@ -98,7 +114,18 @@
                 <p><input type="submit" value="Send data"></p>
             </form>
         </div>
-        <div class="dos">
+        <div class="tres">
+            Carrusel de images
+            <div class="photoGallery">
+                <a href="https://www.google.com"><img
+                        src="../images/cinqueterre.jpg" width="200px"></a>
+                <img src="../images/klematis2_big.jpg" width="200px">
+                <img src="../images/klematis3_small.jpg" width="200px">
+                <img src="../images/perrete.png" width="200px">
+                <img src="../images/pulpitrock.jpg" width="200px">
+            </div>
+        </div>
+        <div class="cuatro">
             <form action="" class="right">
                 <fieldset>
                     <label for="name" class="field">
@@ -125,6 +152,7 @@
 
         }
     </script>
+
 </body>
 
 </html>
