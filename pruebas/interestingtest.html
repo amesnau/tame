@@ -4,49 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/sanitize.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/sanitize.css"> -->
     <title>Document</title>
     <style>
+        html {
+            box-sizing: border-box;
+        }
+
         .container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+            grid-gap: 1rem;
+            justify-items: center;
+            align-items: center;
         }
 
-        @media (max-width: 1120px) {
-            .container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
 
-        @media (max-width: 910px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 715px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        div.uno {
-            grid-area: auto;
-        }
-
-        div.dos {
-            grid-area: auto;
-        }
-
-        div.tres {
-            grid-area: auto;
-        }
-
-        div.cuatro {
-            grid-area: auto;
-        }
-
-        img {
+        .photoGallery img {
             /* Specifies that the center of each photo
        should align with the center of the scroll
        container in the X axis when snapping */
@@ -64,9 +38,11 @@
             scroll-snap-type: x mandatory;
         }
 
+
         fieldset {
             display: grid;
             grid-template-columns: max-content 1fr;
+            /* grid-template-columns: repeat(auto-fit, 25px 1fr) */
             grid-column-gap: 1rem;
             /* margin-bottom: 1rem; */
             row-gap: 1rem;
@@ -100,14 +76,14 @@
                     </legend>
                     <label for="correo" class="field">
                         <span class="label-text">Email:
-                        </span><input id="correo" type="email" size="32">
+                        </span><input id="correo" type="email" size="20">
 
                     </label>
                     <label for="preferencias" class="field">
                         <span class="label-text">Preferencias: </span><input
                             type="text" id="preferencias"
                             placeholder="Indique sus preferencias"
-                            title="Separe sus preferencias con comas" size="40">
+                            title="Separe sus preferencias con comas" size="30">
                     </label>
                 </fieldset>
                 <br>
@@ -115,7 +91,6 @@
             </form>
         </div>
         <div class="tres">
-            Carrusel de images
             <div class="photoGallery">
                 <a href="https://www.google.com"><img
                         src="../images/cinqueterre.jpg" width="200px"></a>
