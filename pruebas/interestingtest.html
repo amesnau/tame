@@ -4,51 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../css/sanitize.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/sanitize.css"> -->
     <title>Document</title>
     <style>
+        html {
+            box-sizing: border-box;
+        }
+
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto;
+            grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+            grid-gap: 1rem;
+            justify-items: center;
+            align-items: center;
         }
 
 
-        div.uno {
-            grid-area: auto;
+        .photoGallery img {
+            /* Specifies that the center of each photo
+       should align with the center of the scroll
+       container in the X axis when snapping */
+            scroll-snap-align: none center;
         }
 
-        div.dos {
-            grid-area: auto;
-        }
-
-
-        form {
-            width: 30%;
-        }
-
-        /* form.right {
-            position: relative;
-            float: right;
-            right: 20rem;
-        } */
-
-        @media (max-width: 700px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            /* form.right {
-                float: left;
-                right: 0;
-            } */
+        .photoGallery {
+            width: 200px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            /* Requires that the scroll position always be
+       at a snap position when the scrolling
+       operation completes. */
+            scroll-snap-type: x mandatory;
         }
 
 
         fieldset {
             display: grid;
             grid-template-columns: max-content 1fr;
+            /* grid-template-columns: repeat(auto-fit, 25px 1fr) */
             grid-column-gap: 1rem;
             /* margin-bottom: 1rem; */
             row-gap: 1rem;
@@ -61,17 +55,15 @@
             row-gap: 1rem;
             grid-template-columns: subgrid;
             grid-gap: inherit;
-
-
         }
     </style>
-
 </head>
 
 <body>
     <div class="container">
-
-        <div class="uno">
+        <div class="uno"><img src="../images/logo.png" alt="Boreal Design"
+                width="200px"></div>
+        <div class="dos">
             <form action="">
                 <fieldset>
                     <legend>
@@ -84,21 +76,31 @@
                     </legend>
                     <label for="correo" class="field">
                         <span class="label-text">Email:
-                        </span><input id="correo" type="email" size="32">
+                        </span><input id="correo" type="email" size="20">
 
                     </label>
                     <label for="preferencias" class="field">
                         <span class="label-text">Preferencias: </span><input
                             type="text" id="preferencias"
                             placeholder="Indique sus preferencias"
-                            title="Separe sus preferencias con comas" size="40">
+                            title="Separe sus preferencias con comas" size="30">
                     </label>
                 </fieldset>
                 <br>
                 <p><input type="submit" value="Send data"></p>
             </form>
         </div>
-        <div class="dos">
+        <div class="tres">
+            <div class="photoGallery">
+                <a href="https://www.google.com"><img
+                        src="../images/cinqueterre.jpg" width="200px"></a>
+                <img src="../images/klematis2_big.jpg" width="200px">
+                <img src="../images/klematis3_small.jpg" width="200px">
+                <img src="../images/perrete.png" width="200px">
+                <img src="../images/pulpitrock.jpg" width="200px">
+            </div>
+        </div>
+        <div class="cuatro">
             <form action="" class="right">
                 <fieldset>
                     <label for="name" class="field">
@@ -125,6 +127,7 @@
 
         }
     </script>
+
 </body>
 
 </html>

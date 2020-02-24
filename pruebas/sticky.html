@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      div.sticky {
+         position: sticky;
+         top: 0;
+         padding: 5px;
+         background-color: #cae8ca;
+         border: 2px solid #4CAF50;
+      }
+
+      div.relative {
+         left: 20px;
+         position: relative;
+         top: 0;
+      }
+   </style>
+</head>
+
+<body>
+
+   <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+   <p>Note: IE/Edge 15 and earlier versions do not support sticky position.</p>
+   <div class="relative">
+      <div class="sticky">I am sticky!</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores facilis a facere, mollitia! Ex accusamus suscipit dicta error, facere eveniet dolor, vel consectetur placeat fugit vero, voluptates beatae atque, esse!</p><br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque distinctio culpa magnam, repellendus veritatis quis blanditiis labore dolorum, architecto dolores necessitatibus beatae porro quidem velit voluptas sit soluta, nemo! <br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A facere, reiciendis! Placeat impedit similique maxime est porro perspiciatis vitae temporibus deserunt quod, corporis quisquam omnis optio repudiandae quas sunt odit. <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nesciunt quo numquam, rem, blanditiis fugiat deserunt laboriosam consequuntur corporis hic consequatur perferendis fuga accusamus in repellendus ipsam praesentium veritatis corrupti!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facere corporis eveniet cum, tempora ipsum adipisci et quibusdam non quam eum quos ullam, provident. Obcaecati, rerum alias sint beatae dolore!</p>
+   </div>
+   <div style="padding-bottom:2000px">
+      <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+      <p>Scroll back up to remove the stickyness.</p>
+      <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+      <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+   </div>
+
+
+</body></html>

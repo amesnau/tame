@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="https://www.w3schools.com/css">
+    <meta name="robots" content="Index, Follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+        .tabla {
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        th,
+        tr,
+        td {
+            padding: 1rem;
+        }
+
+        col:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        td:hover {
+            background-color: green;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        div.first,
+        div.third {
+            display: grid;
+            justify-items: center;
+            align-items: start;
+            /* column-gap: 1rem; */
+        }
+
+        div.second {
+            display: grid;
+
+        }
+
+        hgroup {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">
+            <table border="1" class="tabla">
+                <caption>
+                    Tabla uno
+                </caption>
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2">Nombre y Apellidos</th>
+                        <th>Sueldo</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total:</td>
+                        <td>1500,00</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>
+                            Francisco
+                        </td>
+                        <td>
+                            Diaz
+                        </td>
+                        <td>
+                            1500,00
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="second">
+            <hgroup>
+                <h1>Prueba General de Tablas</h1>
+                <h2>Incluyendo sus elementos y propiedades</h2>
+            </hgroup>
+            <p>A la izquierda podemos ver el contenido de una tabla simulando el
+                sueldo percibido por un trabajador</p>
+            <p>A la derecha podemos apreciar el nivel profesional de ese
+                trabajador</p>
+        </div>
+        <div class="third">
+            <table border="1" class="tabla">
+                <caption>Tabla dos</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            Nombre y Apellidos
+                        </th>
+                        <th>
+                            Profesión
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Francisco Díaz
+                        </td>
+                        <td>
+                            Sistemas
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+
+</html>
