@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-<body>
-   <script>
-      var x = 0, y = 9;
-      x = prompt("Indique primer número (0-9):");
-      y = prompt("Indique segundo número (0-9):");
-      ((x >= 0 && x <= 9) && (y >= 0 && y <= 9)) ? (x > y) ? alert("primer nro. " + x + " es mayor que segundo nro. " + y) : alert("segundo nro. " + y + " es mayor que primer nro. " + x) : alert("Error en alguno de los nros. indicados");
-   </script>
-</body>
+    <body>
+        <script>
+            var x, y, z;
+            x = parseInt(prompt("Indique primer número (0-9):"));
+            y = parseInt(prompt("Indique segundo número (0-9):"));
+            z = parseInt(prompt("Indique tercer número (0-9)"));
+            if ((x < z) && (y < z)) {
+                alert("Tercer número es mayor");
+            } else if (x < y) {
+                alert("Segundo número es mayor");
+            } else {
+                alert("Primero número es mayor")
+            }
+
+        </script>
+    </body>
 
 </html>
