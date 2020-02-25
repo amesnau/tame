@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+
+      <script>
+         var x = 0, y;
+         // do {
+
+         x = prompt("He pensado un número del 1 al 5, Cuál es? (0 para salir)", "0");
+         if (x != 0) {
+            y = getRndInteger(0, 5);
+            // if (x == y) {
+            //    alert("ACERTÓ: " + y + " fue mi número y tu indicaste " + x);
+            // } else {
+            //    alert("NO ACERTÓ " + y + " fue mi número y tu indicaste " + x);
+            // }
+            (x == y) ? document.write("<img src=\"../images/acierto.png\" alt=\"Acierto\">") : document.write("<img src=\"../images/error.jpg\" alt=\"Acierto\">");
+         }
+
+         // } while (x != 0)
+
+
+         function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+         }
+      </script>
+   </body>
+
+</html>
