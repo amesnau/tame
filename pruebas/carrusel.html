@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<HTML>, initial-scale=1.0">
+    <title>Carrusel de Imágenes</title>
+
+    <script>
+        if (self != top) {
+            if (document.images)
+                top.location.replace(window.location.href);
+            else
+                top.location.href = window.location.href;
+        }
+
+        var aImg = new Array(2);
+        aImg[0] = '../images/klematis_small';
+        aImg[1] = '../images/klematis2_small';
+        aImg[2] = '../images/klematis3_small';
+
+
+        var num
+        var num_fotos
+        num_fotos = aImg.length
+        function diap() {
+
+            num = Math.floor(Math.random() * num_fotos);
+            var imagen = aImg[num] + ".jpg"
+            document.images['fotos'].src = imagen;
+
+            var tiempo = setTimeout("diap()", "2500");
+        }
+
+    </script>
+
+</head>
+
+<body bgcolor="#00FFFF" onload="diap()">
+    <center>
+        <h2>Carrusel de imágenes</h2>
+
+        <img id="fotos" src="../images/klematis_small.gif" border="0">
+
+        <p>Se requiere hacer una serie de modificaciones para que pueda incluirse texto y hacer uso de algún botón que
+            permita selecionar alguna opción.</p>
+        <hr>
+    </center>
+</body>
+
+</html>
