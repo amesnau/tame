@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         numeroUno = parseInt(prompt("Indique el primer número:"));
+         numeroDos = parseInt(prompt("Indique el primer número:"));
+         numeroTres = parseInt(prompt("Indique el primer número:"));
+         var numeroMenor, numeroMayor;
+
+         if ((numeroUno < numeroDos) && (numeroDos < numeroTres)) {
+            numeroMayor = numeroTres;
+         } else
+            if (numeroDos > numeroUno) {
+               numeroMayor = numeroDos;
+            } else {
+               numeroMayor = numeroUno;
+            }
+
+         if ((numeroUno > numeroDos) && (numeroDos > numeroTres)) {
+            numeroMenor = numeroTres;
+         } else
+            if ((numeroUno > numeroDos)) {
+               numeroMenor = numeroDos;
+            }
+            else {
+               numeroMenor = numeroUno;
+            }
+         alert(numeroMayor + " es el número mayor y " + numeroMenor + " es el número menor");
+
+
+      </script>
+   </body>
+
+</html>

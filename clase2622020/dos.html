@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         var workNumber = 0;
+         do {
+            workNumber = parseInt(prompt("Indique un número a ser verificado (0 para salir)", "0"));
+            var esPar = workNumber % 2;
+            var esMulCinco = workNumber % 5;
+            if (workNumber != 0) {
+               if (!esPar && !esMulCinco) {
+                  document.write(workNumber + "<p>Es par y es multiplo de cinco</p>");
+               } else
+                  if (!esPar) {
+                     document.write(workNumber + "<p>Es par y no es multiplo de cinco</p>");
+                  }
+                  else
+                     if (!esMulCinco) {
+                        document.write(workNumber + "<p>No es par y es multiplo de cinco</p>");
+                     } else {
+                        document.write(workNumber + "<p>No es par y No es multiplo de cinco</p>");
+                     }
+            }
+         } while (workNumber != 0);
+
+      </script>
+   </body>
+
+</html>
