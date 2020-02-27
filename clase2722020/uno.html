@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         var pregunta = "Cuanto es 20 + 20";
+         var respuestaBuena = 40;
+         var correcto = "<img src='../images/acierto.png' alt='Acierto'>";
+         var incorrecto = "<img src='../images/error.jpg' alt='Error1'>";
+         var respuesta = 0;
+         var interruptor = true;
+
+         do {
+            var respuesta = prompt(pregunta, "0");
+            if ((respuesta == respuestaBuena) || (respuesta == 0)) {
+               interruptor = false;
+               document.write(correcto);
+            } else {
+               confirm("ERROR!!. Presiona Aceptar para otro intento");
+               document.write(incorrecto);
+            }
+         } while (interruptor);
+
+      </script>
+   </body>
+
+</html>

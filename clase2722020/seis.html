@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         var operando1, operando2, operacion;
+         operando1 = parseFloat(prompt("dame el primer operfando"));
+         operacion = prompt("dame la operación (+,-*,/,%");
+         operando2 = parseFloat(prompt("dame el segundo operando"));
+         switch (operacion) {
+
+            case "+":
+
+               alert("total:" + (operando1 + operando2));
+               break;
+
+            case "-":
+
+               alert("total:" + (operando1 - operando2));
+               break;
+
+            case "*":
+
+               alert("total:" + (operando1 * operando2));
+               break;
+
+            case "/":
+
+               if (operando2 == 0) {
+                  alert("División por cero")
+               } else {
+                  alert("total:" + (operando1 / operando2));
+               }
+               break;
+
+            case "%":
+
+               if (operando2 == 0) {
+                  alert("División por cero")
+               } else {
+                  alert("total:" + (operando1 % operando2));
+               }
+
+            default:
+               break;
+
+         }
+      </script>
+   </body>
+
+</html>

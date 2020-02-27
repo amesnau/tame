@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         var mes, anyo, numDias, respuesta;
+         mes = prompt("Indique la descripción del mes").toLowerCase();
+         anyo = parseInt(prompt("Indique un anyo"));
+         switch (mes) {
+            case "enero":
+            case "marzo":
+            case "mayo":
+            case "julio":
+            case "agosto":
+            case "octubre":
+            case "diciembre":
+               numDias = 31;
+               break;
+            case "abril":
+            case "junio":
+            case "septiembre":
+            case "noviembre":
+               numDias = 30;
+               break;
+            case "febrero":
+               if ((anyo % 4 == 0) && (anyo % 100 != 0) || (anyo % 400 == 0)) {
+                  numDias = 29;
+               }
+               else {
+                  numDias = 28
+               }
+               break;
+            default:
+               respuesta = "este mes no existe";
+               break;
+         }
+         if (numDias === undefined) {
+            respuesta = "Mes no definido";
+         } else {
+            respuesta = "El mes " + mes + " del año " + anyo + " tiene " + numDias + " dias";
+         }
+         // }
+
+         alert(respuesta);
+      </script>
+   </body>
+
+</html>
