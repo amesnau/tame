@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h5>Original content</h5>
+        <p>
+            inside paragraph
+            <span>inside span</span>
+            inside paragraph
+        </p>
+    </div>
+    <div>
+        <h5>Output</h5>
+        <div id="output"></div>
+    </div>
+    <script>
+        var baseElement = document.querySelector("div");
+        document.getElementById("output").innerHTML =
+            (baseElement.querySelector("span").innerHTML);
+    </script>
+</body>
+
+</html>
