@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         let donutsComidos = 0;
+         let totalDonutsAComer = 1;
+         let mensaje = "";
+         while ((totalDonutsAComer % 2) != 0) {
+            totalDonutsAComer = parseInt(prompt("Indique el número de donuts a comer"));
+         }
+         while (donutsComidos < totalDonutsAComer) {
+            donutsComidos += 1;
+            console.log('Usted se ha comido ${donutsComidos}');
+            document.write('Usted se ha comido ' + donutsComidos + " donuts <br>");
+         }
+         alert("gracias por comerte los " + donutsComidos + " donuts");
+      </script>
+   </body>
+
+</html>

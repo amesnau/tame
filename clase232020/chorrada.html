@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         table {
+            position: relative;
+            top: 6rem;
+            left: 50rem;
+         }
+      </style>
+   </head>
+
+   <body>
+      <script>
+         let i = 0, numero = 0;
+         while ((numero <= 0) || (numero > 10)) {
+            numero = prompt("Indique el número para obtener la tabla de multiplicar")
+         }
+         document.write('<table border="1">');
+         document.write("<tr>");
+         document.write("<th>");
+         document.write(`Tabla de multiplicar del ${numero}`);
+         document.write("</th>");
+         document.write("</tr>");
+
+         while (i < 11) {
+            document.write("<tr>");
+            document.write("<td>");
+
+            document.write(`${i} multiplicado por ${numero} es igual a ${i * numero} <br>`);
+
+            document.write("</td>");
+            document.write("</tr>");
+
+            i++;
+         }
+         document.write("</table>");
+
+      </script>
+   </body>
+
+</html>
