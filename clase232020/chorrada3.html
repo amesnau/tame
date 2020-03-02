@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-   </head>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
 
-   <body>
-      <script>
-         let numero = prompt("Indique el número que desea especificar");
-         document.write(`${"*".repeat(numero)}`);
-
-      </script>
-   </body>
+<body>
+   <script>
+      let numero = prompt("Indique el número que desea especificar");
+      asteriscos(numero);
+      function asteriscos(veces) {
+         if (veces < 1) {
+            return 0;
+         } else {
+            document.write(`${"*".repeat(numero)}<br>`);
+            return asteriscos(veces - 1);
+         }
+      }
+   </script>
+</body>
 
 </html>
