@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         div {
+            position: relative;
+            width: 20rem;
+            left: 45rem;
+         }
+
+         div:hover {
+            color: red;
+         }
+      </style>
+   </head>
+
+   <body>
+      <script>
+         var startNumber = 0, endNumber = 0;
+         // var calculation = startNumber;
+         startNumber = parseInt(prompt("Indique el número de comienzo"));
+         endNumber = parseInt(prompt("Indique el número final"));
+
+         var numerosPrimos = [];
+
+         for (; startNumber < endNumber; startNumber++) {
+
+            if (primo(startNumber)) {
+               numerosPrimos.push(startNumber);
+            }
+
+         }
+         document.write("<div>");
+         numerosPrimos.forEach(element => document.write(`${element} es primo número ${(numerosPrimos.indexOf(element)) + 1} del rango seleccionado<br>`));
+         // console.log(numerosPrimos);
+         document.write("</div>");
+         function primo(numero) {
+
+            for (var i = 2; i < numero; i++) {
+
+               if (numero % i === 0) {
+                  return false;
+               }
+
+            }
+
+            return numero !== 1;
+         }
+
+         // while (calculation <= endNumber) {
+         //    if(calculation/calculation)
+         //    ((calculation % 2) == 0) ? document.write(`${calculation} es par<br>`) : console.log("");
+         //    calculation++
+         // }
+
+      </script>
+   </body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         div {
+            position: relative;
+            width: 20rem;
+            left: 45rem;
+         }
+
+         div:hover {
+            color: red;
+         }
+      </style>
+   </head>
+
+   <body>
+      <script>
+         let startNumber = 0, i = 1, endNumber = 0;
+         startNumber = parseInt(prompt("Indique el número de comienzo"));
+         endNumber = parseInt(prompt("Indique el número final"));
+         let calculation = startNumber;
+         document.write("<div>");
+         while (calculation <= endNumber) {
+            // ((calculation % 2) == 0) ? document.write(`el número par número ${i} es el ${calculation} <br>`) : console.log("");
+            if ((calculation % 2) == 0) {
+               document.write(`el número par número ${i} es el ${calculation} <br>`);
+               i++;
+            }
+            calculation++;
+         }
+         document.write("</div>");
+      </script>
+   </body>
+
+</html>

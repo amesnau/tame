@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-</head>
-
-<body>
-   <script>
-      let numero = prompt("Indique el número que desea especificar");
-      asteriscos(numero);
-      function asteriscos(veces) {
-         if (veces < 1) {
-            return 0;
-         } else {
-            document.write(`${"*".repeat(numero)}<br>`);
-            return asteriscos(veces - 1);
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         div {
+            position: relative;
+            top: 15rem;
+            left: 45rem;
+            font-family: monospace;
          }
-      }
-   </script>
-</body>
+      </style>
+   </head>
+
+   <body>
+      <script>
+         let numero = parseInt(prompt("Indique el número que desea especificar"));
+         let character = prompt("Indique el caracter de su preferencia");
+         document.write(`<div>`);
+         asteriscos(numero);
+         document.write(`</div>`);
+         function asteriscos(veces) {
+            if (veces < 1) {
+               return 0;
+            } else {
+               document.write(`${character.repeat(numero)}<br>`);
+               return asteriscos(veces - 1); //Ejecución recursiva de la función
+            }
+         }
+      </script>
+   </body>
 
 </html>

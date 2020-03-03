@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         // La multiplicación rusa 
+         let total = 0;
+         let falso = 0;
+         var vectorResultado = [];
+         let primerFactor = parseInt(prompt("Indique multiplicador"));
+         let segundoFactor = parseInt(prompt("Indique multiplicando"));
+         while (primerFactor >= 1) {
+            (primerFactor % 2 == 0) ? falso : vectorResultado.push(segundoFactor);
+            primerFactor = Math.floor(primerFactor / 2);
+            segundoFactor *= 2;
+         }
+
+         vectorResultado.forEach(function (numero) {
+            total += numero;
+         });
+         console.log(total);
+      </script>
+   </body>
+
+</html>

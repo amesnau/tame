@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <script>
+         const CONTRASEÑAOK = "******";
+         let i = 1;
+         while (i <= 3) {
+            let contraseña = prompt("Indique su contraseña");
+            if (contraseña == CONTRASEÑAOK) {
+               i = 4;
+               alert("Contraseña Correcta");
+            } else {
+               i++;
+               alert("Constraseña equivocada");
+            }
+         }
+      </script>
+   </body>
+
+</html>
