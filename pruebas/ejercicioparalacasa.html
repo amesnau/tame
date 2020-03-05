@@ -1,145 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../css/sanitize.css">
-    <title>Document</title>
-    <style>
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 40rem;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="../css/sanitize.css">
+        <title>Document</title>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 40rem;
+            }
 
 
-        div.uno {
-            grid-area: auto;
-        }
+            div.uno {
+                grid-area: auto;
+            }
 
-        div.dos {
-            display: grid;
-            grid-area: auto;
-            justify-content: center;
-            align-content: center;
-        }
+            div.dos {
+                display: grid;
+                grid-area: auto;
+                justify-content: center;
+                align-content: center;
+            }
 
-        form {
-            width: 30%;
-        }
+            form {
+                width: 100%;
+            }
 
-        input:invalid {
-            border-color: red;
-        }
+            input:invalid {
+                border-color: red;
+            }
 
-        #user:valid,
-        #clave:valid {
-            border-color: blue;
-        }
+            #user:valid,
+            #clave:valid {
+                border-color: blue;
+            }
 
-        #mensajeError {
-            color: red;
-            width: 15rem;
-        }
+            #errorusuario,
+            #errorclave {
+                color: red;
+            }
 
-        /* form.right {
+            /* form.right {
             position: relative;
             float: right;
             right: 20rem;
         } */
 
-        @media (max-width: 700px) {
-            .container {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-            }
+            @media (max-width: 700px) {
+                .container {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                }
 
-            /* form.right {
+                /* form.right {
                 float: left;
                 right: 0;
             } */
-        }
+            }
 
 
-        fieldset {
-            display: grid;
-            grid-template-columns: max-content 1fr;
-            grid-column-gap: 1rem;
-            /* margin-bottom: 1rem; */
-            row-gap: 1rem;
-        }
+            fieldset {
+                display: grid;
+                grid-template-columns: max-content 1fr;
+                grid-column-gap: 1rem;
+                /* margin-bottom: 1rem; */
+                row-gap: 1rem;
+            }
 
-        .field {
-            grid-column: span 2;
-            display: grid;
-            grid: inherit;
-            row-gap: 1rem;
-            grid-template-columns: subgrid;
-            grid-gap: inherit;
+            .field {
+                grid-column: span 2;
+                display: grid;
+                grid: inherit;
+                row-gap: 1rem;
+                grid-template-columns: subgrid;
+                grid-gap: inherit;
 
 
-        }
-    </style>
+            }
+        </style>
 
-</head>
+    </head>
 
-<body>
-    <div class="container">
-        <div class="uno"></div>
-        <div class="dos">
-            <form action="">
-                <fieldset>
-                    <legend>
-                        <label for="useraccess">
-                            <input type="checkbox" id="useraccess" checked onchange="switchFieldset()"> Desea acceder
-                            con su usuario
-                        </label>
-                    </legend>
-                    <label for="user" class="field">
-                        <span class="label-text">Usuario:</span>
-                        <input id="user" type="text" title="Hasta 10 caracteres (letras minúsculas y números.)"
-                            pattern="[a-z0-9]{8,12}">
-
-                    </label>
-                    <label for="clave" class="field">
-                        <span class="label-text">Password:</span>
-                        <input type="text" id="clave"
-                            title="Indique su password (debe tener entre 6 y 12 caracteres conteniendo letras minúsculas y al menos un numéro)"
-                            pattern="[a-z0-9]{6,12}">
-                    </label>
-                </fieldset>
-                <input type="submit" value="Send data" onclick="entradaSubmit()">
-                <p id="mensajeError"></p>
-            </form>
+    <body>
+        <div class="container">
+            <div class="uno">
+                <p id="error"></p>
+            </div>
+            <div class="dos">
+            </div>
         </div>
-    </div>
-    <script>
-        // mejorar la función para que contemple la selección en el checkbox
-        function switchFieldset() {
-            var x = document.getElementById("user");
-            var y = document.getElementById("clave");
-            x.disabled && y.disabled ? (x.disabled = false, y.disabled = false) : (x.disabled = true, y.disabled = true);
+        <form>
+            <fieldset>
+                <legend>
+                    <label for="useraccess">
+                        <input type="checkbox" id="useraccess" checked
+                            onchange="switchFieldset()"> Desea acceder
+                        con su usuario
+                    </label>
+                </legend>
+                <label for="user" class="field">
+                    <span class="label-text">Usuario:</span>
+                    <input id="user" type="text"
+                        title="Hasta 10 caracteres (letras minúsculas y números.)"
+                        pattern="[a-z0-9]{8,12}">
+                    <span id="errorusuario"></span>
 
-        }
-    </script>
-    <script>
-        var input = document.getElementById('user');
-        input.oninvalid = function (event) {
-            event.target.setCustomValidity('El usuario indicado debe contener letras minúsculas y números');
-        }
-        var entrada = document.getElementById('clave');
-        input.oninvalid = function (event) {
-            event.target.setCustomValidity('La contraseña indicada debe contener letras minúsculas y números');
-        }
-        function entradaSubmit() {
+                </label>
+                <label for="clave" class="field">
+                    <span class="label-text">Password:</span>
+                    <input type="text" id="clave"
+                        title="Indique su password (debe tener entre 6 y 12 caracteres conteniendo letras minúsculas y al menos un numéro)"
+                        pattern="[a-z0-9]{6,12}">
+                    <p id="errorclave"></p>
+                </label>
+            </fieldset>
+            <input type="submit" value="Send data" onclick="entradaSubmit()">
+        </form>
+        <script>
+            // mejorar la función para que contemple la selección en el checkbox
+            function switchFieldset() {
+                var x = document.getElementById("user");
+                var y = document.getElementById("clave");
+                x.disabled && y.disabled ? (x.disabled = false, y.disabled = false) : (x.disabled = true, y.disabled = true);
+
+            }
+        </script>
+        <script>
+            var input = document.getElementById('user');
+            input.oninvalid = function (event) {
+                event.target.setCustomValidity('El usuario indicado debe contener letras minúsculas y números');
+            }
             var entrada = document.getElementById('clave');
-            var error = document.getElementById('mensajeError');
-            (entrada != "********") ? error.innerHTML = "Equivocó la contraseña indicada" : error.innerHTML = "Password OK";
-        }
+            input.oninvalid = function (event) {
+                event.target.setCustomValidity('La contraseña indicada debe contener letras minúsculas y números');
+            }
 
-    </script>
-</body>
+        </script>
+        <script>
+            function entradaSubmit() {
+                var entrada = document.getElementById('clave');
+                var error = document.getElementById('errorclave');
+                (entrada.value != "********")
+                    ? error.innerHTML = "Equivocó la contraseña indicada"
+                    : error.innerHTML = "password ok";
+            }
+
+        </script>
+    </body>
 
 </html>
