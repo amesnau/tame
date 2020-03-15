@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid green;
+            margin: 15px
+        }
+    </style>
+</head>
+
+<body>
+    <div onclick="alert('div')"> DIV
+        <p onclick="alert('p')"> P
+            <span> SPAN</span>
+        </p>
+    </div>
+
+    <script>
+        var span = document.querySelector('span');
+        span.addEventListener('click', (event) => {
+            alert('span')
+            event.stopPropagation();
+        })
+    </script>
+</body>
+
+</html>
