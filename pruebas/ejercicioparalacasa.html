@@ -100,14 +100,14 @@
                     <label for="user" class="field">
                         <span class="label-text">Usuario:</span>
                         <input id="user" type="text" title="Hasta 10 caracteres (letras minúsculas y números.)"
-                            pattern="[a-z0-9]{8,12}">
+                            pattern="[a-z0-9]{6,12}">
 
                     </label>
                     <label for="clave" class="field">
                         <span class="label-text">Password:</span>
-                        <input type="text" id="clave"
+                        <input type="password" id="clave"
                             title="Indique su password (debe tener entre 6 y 12 caracteres conteniendo letras minúsculas y al menos un numéro)"
-                            pattern="[a-z0-9]{6,12}">
+                            pattern="^[a-zA-Z]\w(@|#\$|%|&)\w{6,12}">
                         <span id="error"></span>
                     </label>
                 </fieldset>
@@ -141,7 +141,7 @@
         const errorElement = document.getElementById('error');
         formaEntrada.addEventListener('submit', (e) => {
             let messages = [];
-            (entrada1.value != "aaaaaaaa")
+            (entrada1.value != "aa&aaaaa")
                 ? messages.push("Equivocó la contraseña indicada")
                 : false;
             (messages.length > 0) ? e.preventDefault() : false;
