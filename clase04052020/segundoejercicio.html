@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let tope = 4, numero = 0, i = 1, nroAleatorio = parseInt(Math.random() * (100 - 1) + 1);
+        while ((nroAleatorio != numero) && (i < tope)) {
+            let numero = parseInt(prompt("Indique un nro del uno al cien"));
+            if (nroAleatorio < numero) {
+                varCompara = "mayor";
+            }
+            else if (nroAleatorio > numero) {
+                varCompara = "menor";
+            }
+            else {
+                varCompara = "igual";
+            }
+            alert(`El nro ${numero} indicado por usted es ${varCompara}`);
+            i++;
+        }
+        alert(`su nro de intentos fueron ${i}`)
+    </script>
+</body>
+
+</html>

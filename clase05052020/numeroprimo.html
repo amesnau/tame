@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let primo = "es primo", index = 2;
+        let number = parseInt(prompt("Type number"));
+        let mitad = number / 2;
+        while (index <= mitad) {
+            // for (let index = 2; index <= mitad; index++) {
+            if (number % index == 0) {
+                primo = "no es primo";
+                break;
+            }
+            index++;
+        }
+        alert(`${number} ${primo}`);
+
+    </script>
+</body>
+
+</html>

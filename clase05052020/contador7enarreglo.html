@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let i = 0, primersiete = 0, contador = 0, seguir = true, v = [1, 2, 7, 4, 5, 6, 7, 7, 7, 8, 9, 10];
+        while (i < v.length) {
+            v[i] == 7 ? contador += 1 : seguir = true;
+            i++;
+            (v[i] == 7 && primersiete == 0) ? primersiete = i : seguir = true;
+        }
+        document.write(`numero de sietes en arreglo es ${contador}, el primero en ${primersiete}`);
+    </script>
+</body>
+
+</html>
