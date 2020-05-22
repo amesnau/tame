@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let capicua = "es capicua";
+        nroString = prompt("Indique el nro. a verificar");
+        let array1 = Array.from(nroString);
+        let array = Array.from(nroString);
+        let array2 = array.reverse();
+        console.log(JSON.stringify(array1) == JSON.stringify(array2));
+        if (JSON.stringify(array1) != JSON.stringify(array2)) {
+            capicua = "no es capicua";
+        }
+        alert("nro." + capicua);
+    </script>
+</body>
+
+</html>

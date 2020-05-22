@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        var text;
+        var favDrink = prompt("What's your favorite cocktail drink?", "Martini");
+        switch (favDrink) {
+            case "Martini":
+                text = "Excellent choice! Martini is good for your soul.";
+                break;
+            case "Daiquiri":
+                text = "Daiquiri is my favorite too!";
+                break;
+            case "Cosmopolitan":
+                text = "Really? Are you sure the Cosmopolitan is your favorite?";
+                break;
+            case null:
+                text = "Why did you cancel?";
+                break;
+            default:
+                text = "I have never heard of that one..";
+                break;
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+
+</html>

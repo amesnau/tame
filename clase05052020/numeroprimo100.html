@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var primo = "es primo", mitad = 0;
+        // let number = parseInt(prompt("Type number"));
+        for (let index = 100; index > 1; index--) {
+
+            let mitad = index / 2;
+
+            for (let i = 2; i <= mitad; i++) {
+                if (index % i == 0) {
+                    primo = "no es primo";
+                    break;
+                }
+
+            }
+            document.write(`${index} ${primo}<br/>`);
+            primo = "es primo";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function esprimo(number) {
+            let primo = "es primo";
+            let mitad = number / 2;
+            let index = 2;
+            while (index <= mitad) {
+                // for (let index = 2; index <= mitad; index++) {
+                if (number % index == 0) {
+                    primo = "no es primo";
+                    break;
+                }
+                index++;
+            }
+            return primo;
+        }
+        let n = parseInt(prompt("Type number"));
+        alert(`${n} ${esprimo(n)}`);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Gatos: <input name="x" type="radio" value="Gatos" />
+    Perros: <input name="x" type="radio" value="Perros" />
+    <script>
+        let x = document.getElementsByName("x");
+        let i, texto = "";
+        alert("Elementos con nombre x:" + x.length);
+        for (let index = 0; index < x.length; index++) {
+            texto = texto + x[index].value + "\n";
+            alert("Se han encontrado los siguientes valores en elementos 'x'\n" + texto);
+        }
+    </script>
+</body>
+
+</html>

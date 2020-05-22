@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let vector = [2, 6, 3, 6, 4, 6, 5, 6];
+        document.write(vector + "<br/>");
+        v = parseInt(prompt("Indique nro. a buscar"));
+        i = vector.indexOf(v, 0);
+        if (i > -1) {
+            document.write(i + "<br/>");
+            for (; i < vector.length;) {
+                c = vector.indexOf(v, i + 1);
+                (c > 0) ? document.write(c + "<br/>") : false;
+                (c > 0) ? i = c : i = vector.length;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

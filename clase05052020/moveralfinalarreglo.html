@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let v = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12];
+        document.write(v);
+        v.unshift(v[(v.length - 1)]);
+        v.pop();
+        document.write(v);
+        v.push(v[0]);
+        v.shift(v);
+        document.write(v);
+        let repisa;
+        repisa = v[0];
+        for (let index = 1; index < v.length; index++) {
+            v[index - 1] = v[index];
+        }
+        v[v.length - 1] = repisa;
+        document.write(v);
+        console.log(v.length);
+    </script>
+</body>
+
+</html>

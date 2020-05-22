@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let v = [-1, -2, -7, 4, -5, -6, -7, -7, -7, -8, -9, -10], mayor = v[0], menor = v[0], indice = 0;
+        // var max = Math.max(...v); //spread operator
+        // document.write(`el mayor del arreglo es ${max}`);
+        for (let index = 1; index < v.length; index++) {
+            if (mayor < v[index]) {
+                mayor = v[index];
+                indiceMayor = index;
+            } else if (menor > v[index]) {
+                menor = v[index];
+                indiceMenor = index;
+            }
+
+        }
+        v[indiceMayor] = menor;
+        v[indiceMenor] = mayor;
+        document.write(`el mayor del arreglo es ${mayor} y su pos era ${indiceMayor} ahora es ${indiceMenor}`);
+        document.write(`el menor del arreglo es ${menor} y su pos era ${indiceMenor} ahora es ${indiceMayor}`);
+    </script>
+</body>
+
+</html>

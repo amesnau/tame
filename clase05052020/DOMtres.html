@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>En un lugar de la Mancha</p>
+    <p>de cuyo nombre no quiero acordarme</p>
+    <p>no ha mucho tiempo que vivia un hidalgo</p>
+    <p>de los de lanza en astillero; </p>
+    <p>adarga antigua, rocin flaco y galgo corredor.</p>
+    <script>
+        let y = document.getElementsByTagName("p");
+        // alert(`El primer paragraph es ${y[0].innerHTML}`);
+        for (let index = 0; index < y.length; index++) {
+            alert(y[index].innerHTML);
+
+        }
+        // y.forEach(element => { alert(y[element].innerHTML); });
+    </script>
+</body>
+
+</html>

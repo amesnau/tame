@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let datos = [-363, -1793, -2601, -2541, 6376, 900, 2340, 1960, 220];
+        document.write(`Original> ${datos}`);
+        document.write("<br/>");
+        ordenarinsercion(datos);
+        document.write(datos);
+        function ordenarinsercion(array) {
+            for (let i = 0, tmp; i < array.length; i++) {
+                tmp = array[i];
+                for (let j = i - 1; j >= 0 && array[j] > tmp; j--) {
+                    array[j + 1] = array[j];
+
+                    array[j] = tmp;
+                }
+
+            }
+            return array;
+        }
+
+    </script>
+</body>
+
+</html>

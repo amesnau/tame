@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // La multiplicación rusa 
+        let total = 0;
+        let falso = 0;
+        var vectorResultado = [];
+        let uno = parseInt(prompt("Indique multiplicador"));
+        let dos = parseInt(prompt("Indique multiplicando"));
+        alert(`El resultado de la multiplicación es ${multRusa(uno, dos)}`);
+        function multRusa(primerFactor, segundoFactor) {
+
+            while (primerFactor >= 1) {
+                (primerFactor % 2 == 0) ? falso : vectorResultado.push(segundoFactor);
+                primerFactor = Math.floor(primerFactor / 2);
+                segundoFactor *= 2;
+            }
+
+            vectorResultado.forEach(function (numero) {
+                total += numero;
+            });
+            return total;
+        }
+    </script>
+</body>
+
+</html>

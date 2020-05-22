@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mystyle {
+            width: 18.75rem;
+            height: 6.25rem;
+            background-color: coral;
+            text-align: center;
+            font-size: 1.5625rem;
+            color: white;
+            margin-bottom: .625rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>Haz click para establecer la clase del div.</p>
+    <div id="myDIV">
+        Yo soy un div
+    </div>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            document.getElementById("myDIV").className = "mystyle";
+        }
+    </script>
+</body>
+
+</html>

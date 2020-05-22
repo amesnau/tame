@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function primerosnrosprimos(number, inicio) {
+            var primo = "es primo", mitad = 0;
+            mitad = parseInt(number / 2);
+            // let number = parseInt(prompt("Type number"));
+
+
+            for (let i = inicio; (i <= mitad); i++) {
+                if (number % i == 0) {
+                    primo = "no es primo";
+                    break;
+                }
+
+            }
+            return primo;
+        }
+        let comienzo = parseInt(prompt("Indique nro. de comienzo"));
+        let cantidad = parseInt(prompt("Indique cuantos nros."));
+        for (let index = (comienzo + cantidad); (index >= comienzo); index--) {
+            document.write(`El nro. ${index} ${primerosnrosprimos(index, comienzo)} <br/>`);
+        }
+    </script>
+</body>
+
+</html>

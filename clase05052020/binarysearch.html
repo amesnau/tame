@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let vector = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(binarySearch(vector, 11));
+        console.log(binarySearch(vector, 5));
+        function binarySearch(array, item) {
+            let min = 0;
+            var max = array.length - 1;
+            while (min <= max) {
+                let middle = Math.floor((min + max) / 2);
+                let guess = array[middle];
+
+                if (guess === item) {
+                    return middle;
+                }
+                if (guess > item) {
+                    max = middle - 1;
+                }
+                else {
+                    min = middle + 1;
+                }
+            }
+            return -1;
+        }
+    </script>
+</body>
+
+</html>

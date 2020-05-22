@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ejemplo {
+            border: 1px solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ejemplo">un div con class="ejemplo"</div>
+    <div class="ejemplo">Otro div conn class="ejemplo"</div>
+    <p class="ejemplo">un p con class "ejemplo"</p>
+    <p>Esto es un elemento <span class="ejemplo">span</span> con class ejemplo dentro de un p</p>
+    <p>Haz click en el button para cambiar el color de fondo de todos los elementos con class ejemplo</p>
+    <button class="ejemplo" onclick="miFuncion()">Pincha</button>
+    <script>
+        let color = "red";
+        function miFuncion() {
+            let array = document.querySelectorAll(".ejemplo");
+            for (let index = 0; index < array.length; index++) {
+                array[index].style.backgroundColor = color;
+            }
+            if (color == "red") {
+                color = "blue";
+            } else if (color == "blue") {
+                color = "yellow";
+            } else if (color == "yellow") {
+                color = "green";
+            } else if (color == "green") {
+                color = "cyan";
+            } else {
+                color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

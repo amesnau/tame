@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let repisa = 0;
+        let numbers = [45, 4, 16, 9, 25];
+        console.log(numbers);
+        numbers.forEach(myFunction);
+
+        function myFunction(value, index, array) {
+            repisa = value, mayor = false, menor = false, igual = false;
+            for (let i = 0; i < numbers.length; i++) {
+
+                if ((repisa > numbers[i])) {
+                    mayor = true;
+                    indice= i;
+                } else if (repisa == number[i] {
+                    igual = true;
+                } else {
+                    menor = true;
+                }
+                repisa = numbers[i - 1];
+                numbers[i - 1] = numbers[i];
+                numbers[i] = repisa;
+            };
+        }
+        }
+        console.log(numbers);
+    </script>
+</body>
+
+</html>

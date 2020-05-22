@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let filas, num, columnas, txt;
+        filas = 1;
+        espacio = document.createTextNode("  ");
+        num = prompt("Introduce un numero");
+        while (filas <= num) {
+            columnas = 1;
+            while (columnas <= num) {
+                if ((filas == 1) || (filas == num)) {
+                    document.write("* ");
+                } else if ((filas > 1) && (filas < num)) {
+                    if ((columnas == 1) || (columnas == num)) {
+                        document.write("* ");
+                    } else {
+                        document.write("<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>");
+                        // body.appendChild(espacio);
+                    }
+                }
+                columnas++;
+            }
+            document.write("<br/>");
+            filas++;
+        }
+    </script>
+
+</body>
+
+</html>

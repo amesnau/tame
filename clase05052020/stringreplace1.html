@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Another replace sample</p>
+    <p id="id">Mr. Bean has a blue car, a green dog and a blue wife</p>
+    <button onclick="miFunction()">Click</button>
+    <script>
+        function miFunction() {
+            let str = document.getElementById("id").textContent;
+            let n = str.replace(/blue|green/ig, "red");
+            document.getElementById("id").textContent = n;
+        }
+    </script>
+</body>
+
+</html>

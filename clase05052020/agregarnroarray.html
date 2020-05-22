@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const array = [10, 20, 25, 35, 45, 60, 70];
+        let array1 = [], entrada = [0, 0, 0, 0];
+        entrada.forEach(element => {
+            element = prompt("Indique nro. a agregar al arreglo");
+        });
+        let number = prompt("Indique el nro. a incorporar");
+        array.forEach(element => {
+            if (number > element) {
+                array1.push(element);
+            } else if (number <= element) {
+                array1.push(number);
+                number = 99999;
+            }
+        });
+        console.log(array);
+        console.log(array1);
+    </script>
+</body>
+
+</html>

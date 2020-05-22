@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo">Contenido</p>
+    <script>
+        var x = document.querySelectorAll("p#demo");
+        document.getElementById("demo").textContent = "El primer paragraph (index 0) con clase class='intro': " + x[0].textContent;
+    </script>
+</body>
+
+</html>

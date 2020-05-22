@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [5, 2, 3, 20, 1, 2, 4, 7];
+        let array1 = [];
+        let repisa = 0;
+        document.write(array + "<br/>");
+        for (let index = 0; index < array.length; index++) {
+            if (index == 0) {
+                repisa = array[index];
+            } else {
+                if (repisa >= array[index]) {
+                    array[0] = array[index];
+                    array[index] = repisa;
+                    repisa = array[0];
+                }
+            }
+
+        }
+        document.write(array + "<br/>");
+        array.sort(function (a, b) { return a - b });
+        // let menor = false;
+        // // repisa = array[1];
+        // for (let index = 0; index < array.length; index++) {
+        //     for (let i = index; i < array.length; i++) {
+        //         if (array[index] <= array[index + 1]) {
+        //             menor = true;
+        //         } else {
+        //             menor = false;
+        //         }
+        //     }
+        // for (let i = index + 1; i < array.length; i++) {
+        //     if (array[index] < array[i]) {
+        //         menor = true;
+        //     } else {
+        //         menor = false;
+        //     };
+        //     menor ? array1.push(array[index]) : menor = false;
+        // }
+        //     console.log(index);
+        //     for (let i = index; i > 1; i--) {
+        //         console.log(i);
+        //         if (array[i] < repisa) {
+        //             // repisa = array[i];
+        //             array[i - 1] = array[i];
+        //             array[i] = repisa;
+        //         } else {
+        //             repisa = array[index];
+        //             break;
+        //         };
+
+        //     }
+        // }
+        document.write(array);
+    </script>
+</body>
+
+</html>

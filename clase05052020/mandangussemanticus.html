@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./javascript.js"></script>
+
+</head>
+
+<body>
+    <form action="#" id="formulario">
+        <label for="opcion1">Opcion 1</label><br />
+        <input type="text" value="1" name="opcion1" id="opcion1">
+        <input type="text" value="2" name="opcion1" id="opcion2">
+        <input type="text" value="3" name="opcion1" id="opcion3">
+        <input type="text" value="4" name="opcion1" id="opcion4">
+        <button>useless button</button>
+    </form>
+    <script>
+        window.onload = function () {
+            var formulario = document.getElementById("formulario");
+            var camposInput = document.getElementsByTagName("input");
+            for (let index = 0; index < camposInput.length; index++) {
+                if (camposInput[index].type = "text") {
+                    camposInput[index].onclick = resalta;
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

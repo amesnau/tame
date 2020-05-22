@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dos,
+        #tres,
+        .oculto {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam veritatis omnis labore similique quam
+        architecto ad?
+        Molestiae nesciunt aspernatur nulla ipsa odit necessitatibus! Praesentium, a optio rem amet atque similique.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa voluptatibus tenetur hic magnam voluptatum
+        consequatur dolorum quaerat nostrum laudantium, quibusdam soluta quae adipisci vel atque facere aliquam?
+        Officia, provident. <span class="oculto" id="dos">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Doloribus
+            ratione
+            molestiae facilis possimus,
+            ullam quasi provident voluptatibus autem cupiditate. A, explicabo atque corrupti illum officiis accusamus
+            incidunt cumque veniam voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+            provident
+            veniam odit voluptas, autem eius ex possimus similique sint cumque minima atque vero facere fugiat molestias
+            blanditiis voluptate! Natus, libero?</span></p>
+    <a href="#dos" onclick="miFuncion('dos')">Leer ...</a>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam veritatis omnis labore similique quam
+        architecto ad?
+        Molestiae nesciunt aspernatur nulla ipsa odit necessitatibus! Praesentium, a optio rem amet atque similique.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa voluptatibus tenetur hic magnam voluptatum
+        consequatur dolorum quaerat nostrum laudantium, quibusdam soluta quae adipisci vel atque facere aliquam?
+        Officia, provident. <span class "oculto" id="tres">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Doloribus
+            ratione
+            molestiae facilis possimus,
+            ullam quasi provident voluptatibus autem cupiditate. A, explicabo atque corrupti illum officiis accusamus
+            incidunt cumque veniam voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+            provident
+            veniam odit voluptas, autem eius ex possimus similique sint cumque minima atque vero facere fugiat molestias
+            blanditiis voluptate! Natus, libero?</span></p>
+    <a href="#tres" onclick="miFuncion('tres')">Leer ...</a>
+    <script>
+
+        function miFuncion(cual) {
+            elemento = document.getElementById(cual).style;
+            if (elemento.display == "inline") {
+                elemento.display = "none";
+            } else {
+                elemento.display = "inline";
+            }
+        }
+    </script>
+</body>
+
+</html>
